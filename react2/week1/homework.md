@@ -7,9 +7,9 @@ Need to brush up on the homework setup process? Check [this](https://github.com/
 This week the homework will result in 2 PRs: 1 in your homework repository and 1 in the Meal Sharing repository.
 
 
-## Github users search
+## GitHub users search
 
-your homework will be searching github users based on the what you type in the input. Use this api: `https://api.github.com/search/users?q=${query}`
+Your homework will be searching GitHub users based on what you type in the input. Use this API: `https://api.github.com/search/users?q=${query}`
 
 Requirements:
 

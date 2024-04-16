@@ -1,9 +1,9 @@
-# Meal-sharing homework overview
+# Meal sharing homework overview
 
-This section provides you an overview of which Meal-sharing parts should be completed **before** the Meal-sharing session itself.
+This section provides you an overview of which meal sharing parts should be completed **before** the meal sharing session itself.
 Those are the parts implemented as parts of homework, starting with the node module.  
 <br/>
-The [last](#meal-sharing-session) section details the homework to be implemented after the Meal-sharing session.
+The [last](#meal-sharing-session) section details the homework to be implemented after the meal sharing session.
 
 <br/>
 
@@ -11,12 +11,13 @@ The [last](#meal-sharing-session) section details the homework to be implemented
 
 ### ➡️ routes:
 
-- `/future-meals `
+- `/future-meals`
 - `/past-meals`
 - `/all-meals`
-- `/first-meal ` -`/last-meal `
+- `/first-meal` 
+- `/last-meal`
 
-[ -> full description](https://github.com/HackYourFuture-CPH/node.js/tree/main/week1/homework)
+[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/homework/readme.md#meal-sharing-endpoints)
 
 <br/>
 
@@ -26,11 +27,11 @@ The [last](#meal-sharing-session) section details the homework to be implemented
 
 **meals**
 
-- GET `/api/meals   `
-- POST `/api/meals   `
-- GET `/api/meals/:id   `
-- PUT `/api/meals/:id   `
-- DELETE `/api/meals/:id   `
+- GET `/api/meals`
+- POST `/api/meals`
+- GET `/api/meals/:id`
+- PUT `/api/meals/:id`
+- DELETE `/api/meals/:id`
 
 **reservations**
 
@@ -40,7 +41,7 @@ The [last](#meal-sharing-session) section details the homework to be implemented
 - PUT `/api/reservations/:id`
 - DELETED `/api/reservations/:id`
 
-[ -> full description](https://github.com/HackYourFuture-CPH/node.js/tree/main/week2)
+[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week2/homework/readme.md#meal-sharing-endpoints)
 
 <br/>
 
@@ -74,13 +75,13 @@ Make sure that the query parameters can be combined, f.x. `?limit=4&maxPrice=90`
 - PUT `/api/reviews/:id`
 - DELETE `/api/reviews/:id`
 
-[ -> full description](https://github.com/HackYourFuture-CPH/node.js/tree/main/week3)
+[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week3/homework/readme.md#meal-sharing-endpoints)
 
 <br/>
 
-## react1 week1 , react1 week2
+## react1 week1, react1 week2
 
--> nothing for Meal-sharing!
+-> *nothing for meal-sharing*
 
 <br/>
 
@@ -88,11 +89,15 @@ Make sure that the query parameters can be combined, f.x. `?limit=4&maxPrice=90`
 
 `MealsList` component.
 
+[-> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react1/week3/homework.md#meal-sharing)
+
 <br/>
 
 ## react2 week1
 
 `Meal` component - created and used in `MealsList`.
+
+[-> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week1/homework.md#meal-sharing)
 
 <br/>
 
@@ -110,11 +115,11 @@ Make sure that the query parameters can be combined, f.x. `?limit=4&maxPrice=90`
 
 - form for review: `POST /api/reviews`
 
-[ -> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week2/homework.md)
+[ -> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week2/homework.md#meal-sharing-app-continued)
 
 <br/>
 
-## Meal-sharing session
+## Meal sharing session
 
 - find a meal by title, use your `title` query parameter. Have a search bar above your `MealsList` in the `/meals` page.
 - sort by `sortKey` and use `sortDir` query parameters (`when`, `max_reservations` and `price`  should be available as per previous homework). Flip between ⬆️ and ⬇️ for sorting direction or implement it in a different way of your choice.

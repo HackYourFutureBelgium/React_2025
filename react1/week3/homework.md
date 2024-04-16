@@ -4,7 +4,7 @@
 
 Need to brush up on the homework setup process? Check [this](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) out before you get into some git confusion!
 
-This week the homework will result in 2 PRs: 1 in your homework repository and 1 in the Meal Sharing repository.
+This week the homework will result in 2 PRs: 1 in your homework repository and 1 in the meal-sharing repository.
 
 ## TODO app
 
@@ -38,15 +38,15 @@ Worth considering:
 - What if the deadline is before the current day?
 - What if you edit an item with an empty description?
 
-## Meal Sharing
+## Meal sharing
 
-For this, you will work in your `Meal Sharing` repository - the same that you worked on in the **Node** module.
+For this, you will work in your meal-sharing repository - the same that you worked on in the **Node** module.
 
-You have just learned **fetching** and rendering the fetched data, and you have built the backend of your Meal Sharing app during the Node module, so it is time to work on the frontend!
+You have just learned **fetching** and rendering the fetched data, and you have built the backend of your meal sharing app during the Node module, so it is time to work on the frontend!
 
-
-Create a `MealsList` component that fetches and renders the meals.
-Your component will have a `meals` state. Render the meal title, description and price at least as simple paragraphs. Add your `MealsList` component to App.js.
+Create a `MealsList` component that fetches and renders the meals. Place the component in its own folder under `/app/src/components`.  
+Your component will have a `meals` state. Render the meal title, description and price at least as simple paragraphs.  
+Add your `MealsList` component to the home page by using it inside `/app/src/components/HomePage/HomePage.jsx`.
 
 <br/>
 

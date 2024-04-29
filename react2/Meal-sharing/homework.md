@@ -1,15 +1,12 @@
-# Meal sharing homework overview
+# Meal sharing project recap
 
-This section provides you an overview of which meal sharing parts should be completed **before** the meal sharing session itself.
-Those are the parts implemented as parts of homework, starting with the node module.  
-<br/>
-The [last](#meal-sharing-session) section details the homework to be implemented after the meal sharing session.
+This page provides you with:
+1. A summary of the homeworks from the NodeJS and React modules that **relate** to the meal-sharing project
+2. Some additional steps to complete **after** the meal sharing session
 
-<br/>
+## NodeJS 
 
-## node week1
-
-### ➡️ routes:
+### Week 1: Feature routes
 
 - `/future-meals`
 - `/past-meals`
@@ -17,40 +14,29 @@ The [last](#meal-sharing-session) section details the homework to be implemented
 - `/first-meal` 
 - `/last-meal`
 
-[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/homework/readme.md#meal-sharing-endpoints)
+[Full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/homework/readme.md#meal-sharing-endpoints)
 
-<br/>
+### Week 2: CRUD routes for meals and reservations
 
-## node week2
-
-### ➡️ routes:
-
-**meals**
-
+`/meals`:
 - GET `/api/meals`
 - POST `/api/meals`
 - GET `/api/meals/:id`
 - PUT `/api/meals/:id`
 - DELETE `/api/meals/:id`
 
-**reservations**
-
+`/reservations`:
 - GET `/api/reservations`
 - POST `/api/reservations`
 - GET `/api/reservations/:id`
 - PUT `/api/reservations/:id`
-- DELETED `/api/reservations/:id`
+- DELETE `/api/reservations/:id`
 
-[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week2/homework/readme.md#meal-sharing-endpoints)
+[Full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week2/homework/readme.md#meal-sharing-endpoints)
 
-<br/>
+### Week 3: Meal filtering and CRUD routes for reviews
 
-## node week3
-
-**meals**
-
-### ➡️ GET `api/meals` query parameters:
-
+`GET /api/meals` query parameters:
 - `maxPrice`
 - `availableReservations`
 - `title`
@@ -60,14 +46,9 @@ The [last](#meal-sharing-session) section details the homework to be implemented
 - `sortKey`
 - `sortDir`
 
-Make sure that the query parameters can be combined, f.x. `?limit=4&maxPrice=90`.
+> Make sure that the query parameters can be **combined**, e.g. `?limit=4&maxPrice=90`.
 
-<br/>
-
-**reviews**
-
-### ➡️ routes:
-
+`/reviews`:
 - GET `/api/reviews`
 - GET `/api/meals/:meal_id/reviews`
 - POST `/api/reviews`
@@ -75,52 +56,52 @@ Make sure that the query parameters can be combined, f.x. `?limit=4&maxPrice=90`
 - PUT `/api/reviews/:id`
 - DELETE `/api/reviews/:id`
 
-[-> full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week3/homework/readme.md#meal-sharing-endpoints)
+[Full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week3/homework/readme.md#meal-sharing-endpoints)
 
-<br/>
+## React 1 
 
-## react1 week1, react1 week2
+### Week 3: `<MealsList>` component
 
--> *nothing for meal-sharing*
+[Full description](https://github.com/HackYourFuture-CPH/React/blob/main/react1/week3/homework.md#meal-sharing)
 
-<br/>
+## React 2
 
-## react1 week3
+### Week 1: `<Meal>` component
 
-`MealsList` component.
+[Full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week1/homework.md#meal-sharing)
 
-[-> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react1/week3/homework.md#meal-sharing)
+### Week 2: Frontend routing and form submissions
 
-<br/>
+Routes:
+- `/` (home page)
+- `/meals/{id}` (meal detail page)
+- `/meals` (all meals page)
 
-## react2 week1
+Meal detail page forms:
+- form for reservation (`POST /api/reservations`)
+- form for review (`POST /api/reviews`)
 
-`Meal` component - created and used in `MealsList`.
-
-[-> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week1/homework.md#meal-sharing)
-
-<br/>
-
-## react2 week2
-
-**➡️ adding frontend routes**
-
-- `/ `
-- `/meals/{id}`
-- `/meals`
-
-**➡️ in the `/meals/{id}` route:**
-
-- form for reservation: `POST /api/reservations`
-
-- form for review: `POST /api/reviews`
-
-[ -> full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week2/homework.md#meal-sharing-app-continued)
-
-<br/>
+[Full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week2/homework.md#meal-sharing-app-continued)
 
 ## Meal sharing session
 
-- find a meal by title, use your `title` query parameter. Have a search bar above your `MealsList` in the `/meals` page.
-- sort by `sortKey` and use `sortDir` query parameters (`when`, `max_reservations` and `price`  should be available as per previous homework). Flip between ⬆️ and ⬇️ for sorting direction or implement it in a different way of your choice.
-- show how many spots for reservations are left on the `Meal` component.
+These tasks should be completed after all of the **above** homework.  These tasks will require you to make changes to both the web app and the API!
+
+Searching for meals:
+- Add a search control (e.g. a text field with a "Search" button) to the page that shows all meals (`/meals`)
+- When a user fills in a text and clicks search, the list of meals shown should be limited to those that partially match the search string
+> Hint: Your API should already accept a query parameter called `title` to perform this kind of filtering!
+
+Sorting meals:
+- Add a sort control (e.g. two drop downs, one for which field to sort on and one for which direction to sort in) to the page that shows all meals (`/meals`)
+- When a user changes which field to sort on **or** when they change the sorting direction, the list of meals shown should change its sort order
+> Hint: Your API should already accept two query parameters called `sortKey` and `sortDir`!
+
+Showing available spots:
+- Add an indicator to the `Meal` component for how many spots are left to be reserved for a given meal
+> Hint: You can extend the `GET /meals` and `GET meals/:id` endpoints to include this information! Another alternative is to create a new endpoint just for this information and call it as an addiontal effect inside of the `<Meal`> component.
+
+
+> Bonus: How can you update this information every 5 seconds?
+
+Once done you can add any final touches before moving forward with deploying your app based on the instructions [here](https://github.com/HackYourFuture-CPH/hyf-project-template?tab=readme-ov-file#deploying).

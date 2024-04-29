@@ -62,11 +62,16 @@ This page provides you with:
 
 ### Week 3: `<MealsList>` component
 
+- Add a new component named `<MealsList>` which fetches some meals from the API and shows them in a simple list
+
 [Full description](https://github.com/HackYourFuture-CPH/React/blob/main/react1/week3/homework.md#meal-sharing)
 
 ## React 2
 
-### Week 1: `<Meal>` component
+### Week 1: `<Meal>` component and grid layout
+
+- Add a new component named `<Meal>` which renders the information for a meal in a nice card design
+- Change the `<MealsList>` to place the `<Meal>` cards in a grid
 
 [Full description](https://github.com/HackYourFuture-CPH/React/blob/main/react2/week1/homework.md#meal-sharing)
 
@@ -104,4 +109,6 @@ Showing available spots:
 
 > Bonus: How can you update this information every 5 seconds?
 
-Once done you can add any final touches before moving forward with deploying your app based on the instructions [here](https://github.com/HackYourFuture-CPH/hyf-project-template?tab=readme-ov-file#deploying).
+Once those 3 tasks are done and you have time over, feel free to polish your application, you can find lots of examples [here](./design-inspo.md).
+
+To finish up the project, deploy your app to [Render.com](https://render.com/) based on the instructions [here](https://github.com/HackYourFuture-CPH/hyf-project-template?tab=readme-ov-file#deploying).

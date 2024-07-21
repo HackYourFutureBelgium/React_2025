@@ -1,4 +1,4 @@
-# Lesson Plan - Building components
+# Lesson Plan - JSX
 
 ## Returning JSX (10 minutes)
 
@@ -94,7 +94,7 @@ import Header from '@/components/Header';
 import Content from '@/components/Content';
 import Footer from '@/components/Footer';
 
-function App() {
+export default function App() {
   return (
     <section>
       <Header />
@@ -103,33 +103,6 @@ function App() {
     </section>
   );
 }
-
-export default App;
-```
-
-### Passing Children to Components
-
-You can pass content (JSX elements) as children to a component, allowing for more flexibility and reusability.
-
-```jsx
-function Card({ children }) {
-  return (
-    <div className="card">
-      {children}
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <Card>
-      <h2>Card Title</h2>
-      <p>Card content goes here.</p>
-    </Card>
-  );
-}
-
-export default App;
 ```
 
 ## {} to execute JS inside JSX (10 minutes)
@@ -139,17 +112,11 @@ export default App;
 You can embed JavaScript expressions inside JSX by wrapping them in curly braces `{}`. This allows you to dynamically render content based on variables, function calls, or any valid JavaScript expression.
 
 ```jsx
-function Greeting() {
+export default function Greeting() {
   const greetingMessage = `Hello there!`;
 
   return <h1>{greetingMessage}</h1>;
 }
-
-function App() {
-  return <Greeting />;
-}
-
-export default App;
 ```
 
 ### Conditional Rendering
@@ -157,10 +124,9 @@ export default App;
 You can use JavaScript expressions and conditional statements inside JSX to conditionally render components or elements.
 
 ```jsx
-
 const isLoggedIn = true;
 
-function Greeting() {
+export default function Greeting() {
   return (
     <div>
       {isLoggedIn ? (
@@ -171,12 +137,6 @@ function Greeting() {
     </div>
   );
 }
-
-function App() {
-  return <Greeting />;
-}
-
-export default App;
 ```
 
 ### Rendering Lists
@@ -190,7 +150,7 @@ const items = [
   { id: 3, name: 'Item 3' },
 ];
 
-function List() {
+export default function List() {
   return (
     <ul>
       {items.map((item) => (
@@ -199,18 +159,16 @@ function List() {
     </ul>
   );
 }
-
-export default List;
 ```
 
-## e. Setting properties such as className, value, etc. (5 minutes)
+## Setting properties such as className, value, etc. (5 minutes)
 
 ### HTML Attributes in JSX
 
 In JSX, you can set HTML attributes on elements just like you would in regular HTML. However, there are some differences in naming conventions and syntax.
 
 ```jsx
-function Input() {
+export default function Input() {
   return (
     <input
       type="text"
@@ -219,8 +177,6 @@ function Input() {
     />
   );
 }
-
-export default Input;
 ```
 
 ### Differences between HTML and JSX Attributes
@@ -228,9 +184,7 @@ export default Input;
 In JSX, some HTML attributes have different names due to naming conflicts with JavaScript reserved words. For example, the `class` attribute in HTML becomes `className` in JSX.
 
 ```jsx
-import React from 'react';
-
-function Card() {
+export default function Card() {
   return (
     <div className="card">
       <h2 className="card-title">Card Title</h2>
@@ -238,44 +192,8 @@ function Card() {
     </div>
   );
 }
-
-export default Card;
 ```
 
 Generally, in JSX, you need to use camelCase for attributes that are written in kebab-case in HTML (e.g., `tabIndex` instead of `tabindex`).
 
-## Exercise
-
-1. Add an id to the todo list objects to deal with the key error
-2. Add a method to delete a todo by using an input field to enter the id to be deleted.
-
-### Counter
-
-First understand the code in this component:
-
-```js
-function WatchCount() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((prev) => prev + 1);
-    }, 1000);
-  });
-
-  return <div>{count}</div>;
-}
-```
-
-Now extend it with the following features:
-
-- Add a button that decrements the counter. What is observed?
-- Add a button that resets the counter to 0
-- Add a text input field and start typing in a long story. What is observed?
-
-### Extra
-
-- A button that pauses the counter
-  - Clicking it should change the text so it says `start`. Clicking the button now should start the timer again and change the text to `pause`
-  - Also, the counter should stop immediately. Hint : you need to return a clean up function from useEffect
-- An input field that lets you set the speed of the counter. The speed should be reflected immediately on keypress and the counter should pause when entering invalid input.
+## Exercises

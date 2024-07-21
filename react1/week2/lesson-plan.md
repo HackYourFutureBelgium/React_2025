@@ -1,81 +1,248 @@
 # Lesson Plan - Building components
 
-- Stateful logic - Having logic around state
-- Stateful logic
-  - Using destructuring in React
-  - State vs. Props
-    - Seeting the state triggers a compenent call.
-    - How to determine if data should be props or state?
-      - Props are "configuration options" for components
-      - State is completely optional
-      - State increases complexity and reduces predictability
-      - Use props unless you definitely need to use state
-      - State is single-level only. Components can read and set their own state, but cannot read or set the state of their children
-    - Understand that we are not allowed to mutate the state.
-- List keys
-  - Render list first without adding the key. See the error
-  - Assignment of unique key to every item rendered in an array
-  - Keys help React identify which items have changed, are added, or are removed
-  - [Index should be avoided](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
-  - [Code inspiration](#todolist-updating-state-with-list)
-- Component life cycles
-  - [Using the effect hook](https://reactjs.org/docs/hooks-effect.html)
-  - Understand when useEffect is executed
-  - Understand how to "clean up" useEffect code
-  - Understand when "clean up" is run
+## Returning JSX (10 minutes)
 
-[Code inspiration](#counter)
+### JSX Syntax and Rules
 
-## Flipped classroom videos
+JSX is a syntax extension to JavaScript that allows you to write HTML-like code in your JavaScript files. It's a way to describe what the UI should look like using a syntax that is familiar to developers who have worked with HTML.
 
-[Flipped classroom videos](./preparation.md#flipped-classroom-videos)
+```jsx
+const element = <h1>Hello, World!</h1>;
+```
 
-## Code inspiration
+### Single Root Element Requirement
 
-### todolist (updating state with list)
+In JSX, you can only return a single root element. If you want to return multiple elements, you need to wrap them in a parent element or use a fragment.
 
-```js
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+```jsx
+// Invalid JSX (multiple root elements)
+const elements = (
+  <div>Hello</div>
+  <div>World</div>
+);
 
-const initTodos = [
-  {
-    text: "clean room",
-  },
-  {
-    text: "do pushups",
-  },
-];
+// Valid JSX (single root element)
+const elements = (
+  <div>
+    <div>Hello</div>
+    <div>World</div>
+  </div>
+);
+```
 
-export function TodoList() {
-  const [todosState, setTodosState] = useState(initTodos);
+### Fragments
 
-  const addTodo = () => {
-    const newTodo = { text: "learn React" };
-    setTodosState((prevTodos) => {
-      return [...prevTodos, newTodo];
-    });
-  };
+Fragments allow you to return multiple elements without a parent element. They are represented by an empty tag `<>...</>` or the `React.Fragment` syntax.
 
-  const todoItems = todosState.map((todo) => (
-    <TodoItem text={todo.text}></TodoItem>
-  ));
+```jsx
+// Using an empty tag
+const elements = (
+  <>
+    <div>Hello</div>
+    <div>World</div>
+  </>
+);
 
+// Using React.Fragment
+const elements = (
+  <React.Fragment>
+    <div>Hello</div>
+    <div>World</div>
+  </React.Fragment>
+);
+```
+
+## Writing your first static component (10 minutes)
+
+### Creating a Functional Component
+
+In React, you can create functional components using JavaScript functions. These components are lightweight and easy to understand.
+
+```jsx
+function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+
+export default HelloWorld;
+```
+
+### Returning JSX from a Component
+
+Components in React must return JSX, which represents the UI that the component should render.
+
+```jsx
+function HelloWorld() {
   return (
-    <div className="App">
-      <button onClick={addTodo}>Add todo</button>
-      {todoItems}
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is a React component.</p>
     </div>
   );
 }
 
-function TodoItem({ text }) {
-  return <li>{text}</li>;
+export default HelloWorld;
+```
+
+## Reusing components inside components (10 minutes)
+
+### Component Composition
+
+In React, you can create complex UIs by composing smaller components together. This promotes code reusability and makes it easier to reason about your application.
+
+```jsx
+import Header from '@/components/Header';
+import Content from '@/components/Content';
+import Footer from '@/components/Footer';
+
+function App() {
+  return (
+    <section>
+      <Header />
+      <Content />
+      <Footer />
+    </section>
+  );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<TodoList />, rootElement);
+export default App;
 ```
+
+### Passing Children to Components
+
+You can pass content (JSX elements) as children to a component, allowing for more flexibility and reusability.
+
+```jsx
+function Card({ children }) {
+  return (
+    <div className="card">
+      {children}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Card>
+      <h2>Card Title</h2>
+      <p>Card content goes here.</p>
+    </Card>
+  );
+}
+
+export default App;
+```
+
+## {} to execute JS inside JSX (10 minutes)
+
+### Embedding Expressions in JSX
+
+You can embed JavaScript expressions inside JSX by wrapping them in curly braces `{}`. This allows you to dynamically render content based on variables, function calls, or any valid JavaScript expression.
+
+```jsx
+function Greeting() {
+  const greetingMessage = `Hello there!`;
+
+  return <h1>{greetingMessage}</h1>;
+}
+
+function App() {
+  return <Greeting />;
+}
+
+export default App;
+```
+
+### Conditional Rendering
+
+You can use JavaScript expressions and conditional statements inside JSX to conditionally render components or elements.
+
+```jsx
+
+const isLoggedIn = true;
+
+function Greeting() {
+  return (
+    <div>
+      {isLoggedIn ? (
+        <h1>Welcome back!</h1>
+      ) : (
+        <h1>Please log in.</h1>
+      )}
+    </div>
+  );
+}
+
+function App() {
+  return <Greeting />;
+}
+
+export default App;
+```
+
+### Rendering Lists
+
+You can use the `map` function to render lists of elements in JSX.
+
+```jsx
+const items = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+];
+
+function List() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default List;
+```
+
+## e. Setting properties such as className, value, etc. (5 minutes)
+
+### HTML Attributes in JSX
+
+In JSX, you can set HTML attributes on elements just like you would in regular HTML. However, there are some differences in naming conventions and syntax.
+
+```jsx
+function Input() {
+  return (
+    <input
+      type="text"
+      placeholder="Enter your name"
+      value=""
+    />
+  );
+}
+
+export default Input;
+```
+
+### Differences between HTML and JSX Attributes
+
+In JSX, some HTML attributes have different names due to naming conflicts with JavaScript reserved words. For example, the `class` attribute in HTML becomes `className` in JSX.
+
+```jsx
+import React from 'react';
+
+function Card() {
+  return (
+    <div className="card">
+      <h2 className="card-title">Card Title</h2>
+      <p className="card-content">Card content goes here.</p>
+    </div>
+  );
+}
+
+export default Card;
+```
+
+Generally, in JSX, you need to use camelCase for attributes that are written in kebab-case in HTML (e.g., `tabIndex` instead of `tabindex`).
 
 ## Exercise
 

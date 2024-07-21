@@ -1,116 +1,138 @@
 # Lesson Plan - Thinking in React
 
-- [Thinking the React way](https://reactjs.org/docs/thinking-in-react.html)
-  - What was the initial problem React solves?
-- Components
-  - Understanding the component model
-    - Break down a site into components
-  - Reusable blocks of JavaScript & HTML
-  - Each component instance can be given different data
-  - [Exercise](#working-with-component-trees)
-- JSX
-  - A way to write dynamic HTML code with JavaScript
-  - It is a more intuitive version of the function `createElement()`
-    - show https://babeljs.io/repl write `<div></div>` converted to `"use strict"; React.createElement("div", null);`
-  - A component should always return JSX
-  - These are the parts that will build the DOM structure
-  - `ReactDOM.render`
-  - Can display JavaScript values in the HTML, using the { } symbols
-  - Class component vs. functional component
-  - Always returns HTML (in the form of JSX)
-  - Render an array in `.map`
-- create-react-app
-  - Show students how to install create-react-app. [Getting Started](https://create-react-app.dev/docs/getting-started).
-  - Explain the general structure
-  - How to run `npm run start`
-  - Talk briefly about how the dist folder is generated
-- Component tree - hierarchy of components
-  - Transform a todolist sketch into components on white board.
-  - _Exercise:_ transform another ui into components in pairs.
-- Props
-  - Props is short for property (like a regular HTML attribute)
-  - It is (dynamic) data that can be given to child components
-  - Passed down using an identifier, a self-defined attribute name
-  - Can be given to multiple instances of components
-  - [Code inspiration](#userlist-components-jsx-and-props)
-  - [Exercise](#useritemexpanded)
+## Why React.js / Next.js? (10 minutes)
 
-Both props and state are plain JavaScript objects/values.
+### Brief overview of React and its limitations
 
-Teacher suggestion:
+React is a popular JavaScript library for building user interfaces. It introduced the concept of component-based architecture, making it easier to create reusable UI components. However, React is primarily focused on the client-side rendering of web applications, which can lead to longer initial load times and poor SEO performance.
 
-- "Why React comes" - video - all students should watch this.
+### Introduction to Next and its limitations
 
-## Flipped classroom videos
+Next.js is a React framework that adds server-side rendering (SSR) capabilities to React applications. It allows you to pre-render pages on the server, improving initial load times and SEO performance. Next.js also provides features like static site generation, file-based routing, and API routes out of the box. However, having all of these features out of the box makes it more opinionated, as it has rigid constraints on how things are done.
 
-[Flipped classroom videos](./preparation.md#flipped-classroom-videos)
+## Thinking in Components (15 minutes)
 
-### Get started with React and parcel.js
+### Concept of component-based architecture
 
-- https://github.com/senner008/react-min-boilerplate-parcel
+In a component-based architecture, the user interface is broken down into reusable components. Each component encapsulates its own logic, state, and presentation, making it easier to reason about and maintain the codebase.
 
-## Coding inspiration
+### Breaking down UI into reusable components
 
-### UserList (Components, jsx and props)
+When building a user interface with React or Next.js, it's essential to identify the different components that make up the UI. For example, a typical web page might have components like a header, navigation menu, content area, and footer.
 
-```js
-import React from "react";
-import ReactDOM from "react-dom";
+### Hierarchy and composition of components
 
-function UserItem(props) {
-  return (
-    <li>
-      <h3>
-        {props.name}: {props.age}
-      </h3>
-    </li>
-  );
-}
+Components can be nested and composed together to create more complex UI structures. Parent components can pass data down to child components through props, and child components can communicate back to parent components through callbacks or state management solutions like React Context or Redux.
 
-function UserList(props) {
-  return (
-    <ul>
-      {props.users.map((user) => {
-        return <UserItem name={user.name} age={user.age} key={user.id} />;
-      })}
-    </ul>
-  );
-}
+## Creating and running a Next.js app (10 minutes)
 
-const users = [
-  {
-    id: 0,
-    name: "Benjamin",
-    age: 32,
-  },
-  {
-    id: 1,
-    name: "Peter",
-    age: 43,
-  },
-];
+### Setting up a new Next.js project
 
-ReactDOM.render(<UserList users={users} />, document.getElementById("root"));
+To create a new Next.js project, you can use the `create-next-app` command provided by [the React.js team](https://react.dev/learn/start-a-new-react-project):
+
+```bash
+npx create-next-app my-app
 ```
 
-### Counter example
+This will set up a new Next.js project with the necessary dependencies and a basic file structure.
 
-```js
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+### Project structure overview
 
-function Counter() {
-  const [counterState, setCounterState] = useState(0);
+A typical Next.js project structure looks like this:
 
-  const increment = () => {
-    setCounterState((prev) => prev + 1);
-  };
-
-  return <button onClick={increment}>{counterState}</button>;
-}
-
-ReactDOM.render(<Counter />, document.getElementById("root"));
 ```
+my-app/
+├── node_modules/
+├── app/
+│   ├── page.js
+│   ├── layout.js
+│   ├── globals.css
+│   ├── favicon.ico
+│   └── ...
+├── components/
+├── public/
+├── .gitignore
+├── next.config.js
+├── jsconfig.json
+├── package.json
+└── package-lock.json
+```
+
+- `app/` directory contains the React components that represent different pages in your application.
+- `components/` directory contains the React components that represent all the custom components built by you.
+- `public/` directory is where you can store static assets like images, documents, etc.
+- `next.config.js` is a configuration file for customizing Next.js behavior.
+
+### Running the development server
+
+To start the Next.js development server, run the following command:
+
+```bash
+npm run dev
+```
+
+This will start the development server and automatically reload the application when you make changes to the code.
+
+## Importing/exporting .jsx (5 minutes)
+
+### Explanation of JSX files
+
+In React and Next.js, components are typically defined in `.jsx` files, which allow you to write HTML-like syntax (JSX) alongside JavaScript code.
+
+### How to import and export components
+
+To use a component in another file, you need to export it from the file where it's defined and import it in the file where you want to use it.
+
+```jsx
+// my-app/components/MyComponent.jsx
+export default function MyComponent() {
+  return <div>Hello, World!</div>;
+}
+```
+
+```jsx
+// App.jsx
+import MyComponent from '@/components/MyComponent';
+
+function App() {
+  return (
+    <div>
+      <MyComponent />
+    </div>
+  );
+}
+```
+
+## Importing .css (5 minutes)
+
+### Global styles vs. component-specific styles
+
+In Next.js, you can import global CSS styles by creating a file (e.g., `globals.css`) and importing it in the `layout.js` file, which is the root component of your Next.js application.
+
+For component-specific styles, you can use CSS modules, which are scoped to the component where they are imported.
+
+### CSS modules in Next.js
+
+To use CSS modules in Next.js, create a `.module.css` file and import it into your component file.
+
+```css
+/* mycomponent.module.css */
+.container {
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+```
+
+```jsx
+// MyComponent.jsx
+import styles from './mycomponent.module.css';
+
+export default function MyComponent() {
+  return <div className={styles.container}>Hello, World!</div>;
+}
+```
+
+In this example, the `container` class is scoped to the `MyComponent` component, preventing naming conflicts with other components in the application.
 
 ## Exercises
 

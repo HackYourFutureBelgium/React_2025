@@ -2,16 +2,7 @@
 
 ## Adding Event Handlers (15 minutes)
 
-In React.js, you can handle events in a similar way to javascript. Here are some examples:
-
-```jsx
-
-// Inline event handler
-<button onClick={handleClick}>Click me</button>
-
-// 
-
-```
+In React.js, you can handle events in a similar way to javascript. Here is an example:
 
 ```jsx
 'use client'
@@ -24,7 +15,7 @@ export default function EventHandlerExample() {
   }
 
   // Separate function
-  const handleClickArgs = (arg) => {
+  const handleClickArg = (arg) => {
     console.log(arg)
     // Handle click event
   }
@@ -36,7 +27,7 @@ export default function EventHandlerExample() {
       <button onClick={handleClick}>Click me</button>
 
       {/* Passing arguments */}
-      <button onClick={() => handleClick("My argument")}>Click me</button>
+      <button onClick={() => handleClickArg("My argument")}>Click me</button>
     </div>
   )
 }

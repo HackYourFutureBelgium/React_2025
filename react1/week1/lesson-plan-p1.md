@@ -31,7 +31,7 @@ Components can be nested and composed together to create more complex UI structu
 To create a new Next.js project, you can use the `create-next-app` command provided by [the React.js team](https://react.dev/learn/start-a-new-react-project):
 
 ```bash
-npx create-next-app my-app
+npx create-next-app@latest
 ```
 
 This will set up a new Next.js project with the necessary dependencies and a basic file structure.
@@ -91,10 +91,10 @@ export default function MyComponent() {
 ```
 
 ```jsx
-// App.jsx
+// my-app/app/page.js
 import MyComponent from '@/components/MyComponent';
 
-function App() {
+function Home() {
   return (
     <div>
       <MyComponent />

@@ -19,7 +19,7 @@ Hooks are functions that allow you to use React features (like state) without wr
 
 ### How to declare and use state with useState
 
-The `useState` hook is used to declare and manage state in functional components. Keep in mind useState can only be used in client-side components, and so we need `"use client"` at the top of the file. Client-side components are rendered in the browser only, which is what we want for now.
+The `useState` hook is used to declare and manage state in functional components. Keep in mind useState can only be used in client-side components in Next.JS, and so we need `"use client"` at the top of the file. Client-side components are rendered in the user's browser (and not on the server), which is what we want for now.
 
 ```jsx
 "use client" // Ensure that this component renders on the client-side

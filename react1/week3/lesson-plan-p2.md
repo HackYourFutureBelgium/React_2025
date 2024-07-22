@@ -6,8 +6,9 @@ Hooks are functions that allow you to use React features (like state and lifecyc
 
 ### Rules of Hooks
 
-1. Hooks can only be called at the top level of a React function component or a custom Hook.
+1. Hooks can only be called at the top level of a React function component or a [custom Hook](https://react.dev/learn/reusing-logic-with-custom-hooks).
 2. Hooks cannot be called inside loops, conditions, or nested functions.
+3. Hooks are only used in client-side components (so `"use client"` is necessary whenever one is used)
 
 ```jsx
 'use client' // Use client directive for components using React hooks

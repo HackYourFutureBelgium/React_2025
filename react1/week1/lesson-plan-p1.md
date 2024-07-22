@@ -44,8 +44,8 @@ A typical Next.js project structure looks like this:
 my-app/
 ├── node_modules/
 ├── app/
-│   ├── page.js
-│   ├── layout.js
+│   ├── page.jsx
+│   ├── layout.jsx
 │   ├── globals.css
 │   ├── favicon.ico
 │   └── ...

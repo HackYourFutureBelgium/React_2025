@@ -52,14 +52,13 @@ This will set up a new Next.js project with the necessary dependencies and a bas
 
 
 > [!NOTE]
-> <details>
->  <summary>Understanding all the options are out of the scope for this module, but if you are interested you can read about it here</summary>
+> Understanding all the options is out of the scope of this module, but if you are interested you can read more about it here:
+> 
 > - *[TypeScript](https://www.typescriptlang.org/)* is a superset of Javascript and introduces type checking which means it checks if the specified types match before running the code, not while running the code. It helps identifying errors early on.
 > - *[ESLint](https://eslint.org/)* is an a tool which analyzes your code to ensure it follows good coding conventions. This helps keep the code clean and maintainable.
 > - *[Tailwind CSS](https://tailwindcss.com/)* is a CSS framework which comes with a lot of utility classes to quickly add CSS styling to your components. It enables you to add styling without having to add most of the common CSS classes.
 > - Using a `src/` directory is a common pattern to separate your source code from your configuration of the app. It can help you get a better overview of the project as it grows, but this option ultimately comes down to personal preference and won't affect your app.
 > - *[App Router](https://www.freecodecamp.org/news/routing-in-nextjs/)* enables us to easily navigate between pages found in the `/app/pages/` folder. It is a build-in feature of Next.js and will solve most of your needs for page navigation.
-> </details>
 
 
 

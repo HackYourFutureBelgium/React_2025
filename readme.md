@@ -15,14 +15,15 @@ React is free an open-source frontend JavaScript library for building user inter
 This course is divided in 2 modules, of 3 and 2+1 week.
 
 
-## Module goals:
+## Module goals
 
-### [React1 Module:](/react1/readme.md)   
+### [React 1](/react1/readme.md)
+- Why use a framework?
 - Thinking the React way
 - Building components
 - Advanced React
 
-### [React2 Module:](/react2/readme.md)
+### [React 2](/react2/readme.md)
 - Managing state
 - Connecting to node
 
@@ -37,33 +38,30 @@ https://youtu.be/nYkdrAPrdcw
 
 Also be sure you're familiar with ES6-syntax. This is a handy reference of all features of ES6:
 
-http://es6-features.org
+https://developer.mozilla.org
 
 Please _do not worry about understanding all_. However, do make sure you understand the following, as we'll be using them a lot:
 
-- http://es6-features.org/#Constants
-- http://es6-features.org/#ObjectMatchingShorthandNotation
-- http://es6-features.org/#RestParameter
-- http://es6-features.org/#SpreadOperator
+- [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Rest Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 Read about React here:
 
-https://reactjs.org/
+https://react.dev
 
-## Real world example
+Read about Next.JS here:
 
-Have a look at Exemplary real world application built with React + Redux:
-
-https://github.com/gothinkster/react-redux-realworld-example-app
+https://nextjs.org
 
 _The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :)_
 
-# Beyond React
+# Beyond Next.JS
 
 The following libraries are worth mentioning to use in conjunction with React:
 
-- **[FlowType](https://flowtype.org)** - a way to annotate ES6 with types, similar to TypeScript
+- **[TypeScript](https://www.typescriptlang.org/)** - a way to annotate ES6 with types
 - **[Redux](https://flowtype.org)** - predictable (application) state container, a Flux implementation
-- **[Webpack](https://webpack.js.org)** - a JS packager, used by `create-react-app`
-- **[Babel](https://babeljs.io)** - a ES6+ to JS transpiler, also used by `create-react-app`
-- **[JSS](https://github.com/cssinjs/jss)** - a way to write CSS-like styles inside your component files
+- **[Tailwind CSS](https://tailwindcss.com/)** - Open-source CSS framework
+- **[Material UI](https://mui.com/material-ui/)** - Open-source React component library that implements Google's Material Design

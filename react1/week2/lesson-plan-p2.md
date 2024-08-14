@@ -203,3 +203,34 @@ function ChildComponent({ sharedState, updateSharedState }) {
 In this example, the `ParentComponent` manages the `sharedState` and provides it along with the `updateSharedState` function to the `ChildComponent`. The child component can then access and update the shared state using the props passed down from the parent.
 
 ## Exercises
+
+### Create a Counter component (10 minutes)
+
+1. Create a new component called `Counter`.
+2. Use the `useState` hook to manage a count state variable.
+3. Implement functions to increment and decrement the count.
+4. Render the current count value and buttons to call the increment and decrement functions.
+
+### Build a Todo List component (15 minutes)
+
+1. Create a new component called `TodoList`.
+2. Use the `useState` hook to manage an array of todo items.
+3. Implement a function to add a new todo item to the array.
+4. Implement a function to remove a todo item from the array.
+5. Render the list of todo items, an input field to add new todos, and buttons to remove todos.
+
+### Develop a Form component (10 minutes)
+
+1. Create a new component called `Form`.
+2. Use the `useState` hook to manage the state of form input fields.
+3. Implement a function to handle form submission.
+4. Render input fields for each form field and a submit button.
+
+### Create a ParentChild component set (10 minutes)
+
+1. Create a new component called `Parent`.
+2. Create another component called `Child`.
+3. In the `Parent` component, use the `useState` hook to manage a state variable.
+4. Implement a function to update the state variable.
+5. Render the `Child` component and pass the state variable and the update function as props.
+6. In the `Child` component, render the data received from the parent and a button to call the update function.

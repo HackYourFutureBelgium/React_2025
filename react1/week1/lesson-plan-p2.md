@@ -197,3 +197,27 @@ export default function Card() {
 Generally, in JSX, you need to use camelCase for attributes that are written in kebab-case in HTML (e.g., `tabIndex` instead of `tabindex`).
 
 ## Exercises
+
+### Writing functions to return JSX (10 minutes)
+
+- Write a JSX expression that renders an `h1` element with the text "Hello, World!".
+- Write a JSX expression that renders a `div` element with two child elements: an `h2` element with the text "Welcome" and a `p` element with the text "This is a paragraph".
+- Write a JSX expression that renders a `ul` element with three `li` elements, each containing a different fruit name.
+
+### Writing static components (10 minutes)
+
+- Create a functional component called `Greeting` that returns an `h1` element with the text "Hello, React!".
+- Create a functional component called `Card` that returns a `div` element with a nested `h2` element and a `p` element. The `h2` should display the text "Card Title", and the `p` should display the text "This is a card component".
+
+### Nesting components (10 minutes)
+
+Create a functional component called `Cards` that renders two instances of the `Card` component you created in Exercise 5.
+
+### Executing JS inside JSX (10 minutes)
+
+Create a functional component called `FruitList` that renders a `ul` element with `li` elements for each fruit in an array of fruits. The array of fruits should be defined as a constant inside the component.
+
+### Setting properties such as className and value (5 minutes)
+
+- Create a functional component called `Button` that renders a `button` element with a `className` prop set to "btn btn-primary".
+- Create a functional component called `Input` that renders an `input` element with a `value` prop set to "Initial value".

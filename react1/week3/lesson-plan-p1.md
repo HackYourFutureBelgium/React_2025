@@ -99,3 +99,27 @@ const ImpureComponent = () => {
 ```
 
 ## Exercises
+
+### Create a ClickCounter component (10 minutes)
+
+1. Create a new component called `ClickCounter`.
+2. Use the `useState` hook to manage a `count` state variable.
+3. Implement an `onClick` event handler function that increments the `count`.
+4. Render a button and display the current value of `count`.
+
+### Build a SimpleForm component (15 minutes)
+
+1. Create a new component called `SimpleForm`.
+2. Use the `useState` hook to manage the state of form inputs.
+3. Create input fields for the form (e.g., name, email, message).
+4. Implement a `handleSubmit` function to handle form submission.
+5. Render the form inputs and a submit button.
+
+### Develop a TodoList component (20 minutes)
+
+1. Create a new component called `TodoList`.
+2. Use the `useState` hook to manage an array of todo items.
+3. Implement a function to add a new todo item to the array.
+4. Implement a function to remove a todo item from the array.
+5. Render a list of todo items using the `.map` method, ensuring each item has a unique `key` prop.
+6. Render an input field to add new todos and buttons/functionality to remove todos.

@@ -108,3 +108,30 @@ function Button({ label, disabled }) {
 ```
 
 ## Exercises
+
+### Create a reusable Button component (10 minutes)
+
+1. Create a new component called `Button`.
+2. Accept `text` and `onClick` as props.
+3. Render a button element with the `text` prop as its content.
+4. Attach the `onClick` prop to the button's `onClick` event handler.
+
+### Create a Card component (15 minutes)
+
+1. Create a new component called `Card`.
+2. Accept `title`, `description`, and `imageUrl` as props.
+3. Use destructuring to extract the props.
+4. Render a card-like structure with the provided `title`, `description`, and `imageUrl`.
+
+### Create a Layout component (10 minutes)
+
+1. Create a new component called `Layout`.
+2. Accept `children` as a prop.
+3. Render a layout structure (e.g., header, main content area, footer) with the `children` prop rendered inside the main content area.
+
+### Implement conditional rendering (10 minutes)
+
+1. Create a new component called `ToggleContent`.
+2. Accept a `show` prop as a boolean value.
+3. Accept `content` as a prop, which can be a string or a React element.
+4. Render the `content` prop only if the `show` prop is true, otherwise render a message or nothing.

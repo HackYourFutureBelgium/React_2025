@@ -135,3 +135,20 @@ export default function MyComponent() {
 In this example, the `container` class is scoped to the `MyComponent` component, preventing naming conflicts with other components in the application.
 
 ## Exercises
+
+### Set up a new Next.js project (10 minutes)
+
+### Create a simple component structure (20 minutes)
+
+- Design a basic layout with header, main content, and footer
+- Create separate components for each section
+
+### Import and use components (10 minutes)
+
+- Import components into the main page
+- Arrange components to create the layout
+
+### Add basic styling (5 minutes)
+
+- Create a global CSS file
+- Import and apply styles to components

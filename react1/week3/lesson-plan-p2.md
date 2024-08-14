@@ -134,3 +134,28 @@ function UserProfile({ userId }) {
 In this example, `useEffect` is used to fetch user data from an API when the component mounts or when the `userId` prop changes. The component also handles loading and error states.
 
 ## Exercises
+
+### Create a Clock component (15 minutes)
+
+1. Create a new component called `Clock`.
+2. Use the `useState` hook to manage the current time.
+3. Use the `useEffect` hook to set up an interval that updates the time every second.
+4. Implement the cleanup function in `useEffect` to clear the interval when the component unmounts.
+5. Render the current time in the component.
+
+### Build a DataFetcher component (15 minutes)
+
+1. Create a new component called `DataFetcher`.
+2. Use the `useState` hook to manage the data, loading, and error states.
+3. Use the `useEffect` hook to fetch data from a public API when the component mounts.
+4. Implement loading and error states in the component's JSX.
+5. Render the fetched data when it's available.
+
+### Develop a WindowResizer component (15 minutes)
+
+1. Create a new component called `WindowResizer`.
+2. Use the `useState` hook to manage the window size.
+3. Use the `useEffect` hook to set up an event listener for the `resize` event.
+4. Update the window size state whenever the `resize` event is triggered.
+5. Implement the cleanup function in `useEffect` to remove the event listener when the component unmounts.
+6. Render the current window size in the component.

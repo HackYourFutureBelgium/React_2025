@@ -2,19 +2,22 @@
 
 ## Why React.js / Next.js? (10 minutes)
 
-### Brief overview of React and its limitations
+### Brief overview of React
 
-React is a popular JavaScript library for building user interfaces. It introduced the concept of component-based architecture, making it easier to create reusable UI components. However, React is primarily focused on the client-side rendering of web applications, which can lead to longer initial load times and poor SEO performance.
+React is a popular JavaScript library for building user interfaces. It introduced the concept of component-based architecture, making it easier to create reusable UI components. It was released by Facebook in 2013 and has since then become [the most popular Javascript framework](https://www.geeksforgeeks.org/most-popular-javascript-frameworks-for-web-development/) due to its strong capabilities, performance, and ease of use.
 
-### Introduction to Next and its limitations
+### Introduction to Next.js
+React in itself enforces very few rules on how you structure a design your project. However, more often than not when a projects grow they require us to handle similar challenges such as page routing, data fetching, and code splitting.
 
-Next.js is a React framework that adds server-side rendering (SSR) capabilities to React applications. It allows you to pre-render pages on the server, improving initial load times and SEO performance. Next.js also provides features like static site generation, file-based routing, and API routes out of the box. However, having all of these features out of the box makes it more opinionated, as it has rigid constraints on how things are done.
+Luckily, several frameworks already exists which address these common challenges. It is [recommended to use one of the frameworks](https://react.dev/learn/start-a-new-react-project) to avoid having to solve these common challenges yourself. However, each framework have its own constraints on how things are done which makes them more opinionated. You should therefore pick the framework which best suits your needs and style of coding.  
+
+In this module we will be using the framework *Next.js* which is one of the most popular React framework today. Other than solving the abovementioned challenges, Next.js also adds server-side rendering capabilities which can make your page load faster and improve search engine optimization (SEO) which makes your site more likely to be suggested by search engines like Google. 
 
 ## Thinking in Components (15 minutes)
 
 ### Concept of component-based architecture
 
-In a component-based architecture, the user interface is broken down into reusable components. Each component encapsulates its own logic, state, and presentation, making it easier to reason about and maintain the codebase.
+In a component-based architecture, the user interface is broken down into reusable components similar to how we break up our Javascript code into reusable functions. Each component encapsulates its own logic, state, and presentation, making it easier to understand and maintain.
 
 ### Breaking down UI into reusable components
 
@@ -34,7 +37,32 @@ To create a new Next.js project, you can use the `create-next-app` command provi
 npx create-next-app@latest
 ```
 
+You will presented with a few options for the project you are generating. For this module we will use the following options:
+| Option    | Value  |
+| -------- | ------- |
+| Project name  | Name of your project |
+| Use TypeScript  | No  |
+| Use ESLint      | Yes |
+| Use Tailwind    | No  |
+| Use `src/` directory  | No |
+| Use App Router  | Yes |
+| Customize import alias    | No |
+
 This will set up a new Next.js project with the necessary dependencies and a basic file structure.
+
+
+> [!NOTE]
+> Understanding all the options is out of the scope of this module, but if you are interested you can read more about it here:
+> 
+> - *[TypeScript](https://www.typescriptlang.org/)* is a superset of Javascript and introduces type checking which means it checks if the specified types match before running the code, not while running the code. It helps identifying errors early on.
+> - *[ESLint](https://eslint.org/)* is an a tool which analyzes your code to ensure it follows good coding conventions. This helps keep the code clean and maintainable.
+> - *[Tailwind CSS](https://tailwindcss.com/)* is a CSS framework which comes with a lot of utility classes to quickly add CSS styling to your components. It enables you to add styling without having to add most of the common CSS classes.
+> - Using a `src/` directory is a common pattern to separate your source code from your configuration of the app. It can help you get a better overview of the project as it grows, but this option ultimately comes down to personal preference and won't affect your app.
+> - *[App Router](https://www.freecodecamp.org/news/routing-in-nextjs/)* enables us to easily navigate between pages found in the `/app/pages/` folder. It is a build-in feature of Next.js and will solve most of your needs for page navigation.
+
+
+
+
 
 ### Project structure overview
 
@@ -65,8 +93,12 @@ my-app/
 
 ### Running the development server
 
-To start the Next.js development server, run the following command:
+First make sure to navigate to your project folder in the terminal
+```bash
+cd my-app # replace 'my-app' with the name of your app
+```
 
+To start the Next.js development server, run the following command:
 ```bash
 npm run dev
 ```

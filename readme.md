@@ -50,7 +50,7 @@ Additionally, you will also implement the UI for your [Meal Sharing App](https:/
 2. Read the [React landing page](https://react.dev)
 3. Read the [Next.js landing page](https://nextjs.org)
 
-# Beyond Next.JS
+# Beyond Next.js
 
 Unfortunately, we won't be able to cover all areas of React in this course, but only the essentials. There are a lot of powerful tools out there for you to learn after you finish this course such as:
 

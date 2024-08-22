@@ -7,8 +7,9 @@ import { Footer } from '../../components/ui/Footer';
 
 import styles from './page.module.css';
 
-
-const API_KEY = 'hlcFvEJEPXDr9eUJ7fMHpbsXapwoRjfQDnfMRh9V';
+// Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
+// You need a proper API_KEY for the requests to work
+const API_KEY = 'API_KEY';
 
 const NASA_URLs = {
   astronomyPicOfTheDay: `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,

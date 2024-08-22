@@ -1,9 +1,12 @@
+> [!IMPORTANT]
+> The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :blush:
+
 > [!NOTE]
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
 
 <h1 align='center'>
  HackYourFuture - React
-</h1>   
+</h1>
 
 <p align='center'>
 <img src='react-logo.png' width='600px'>
@@ -45,20 +48,9 @@ In React 2 we will further expand our skills and learn:
 Additionally, you will also implement the UI for your [Meal Sharing App](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project) using the skills you learn in this course. :rocket:
 
 ## Read up before we get started
-
-[![Watch the video](https://i3.ytimg.com/vi/N3AkSS5hXMA/maxresdefault.jpg)](https://www.youtube.com/watch?v=N3AkSS5hXMA)
-
-1. Watch the above React introductory video
+1. Watch the [React introductory video](https://www.youtube.com/watch?v=N3AkSS5hXMA)
 2. Read the [React landing page](https://react.dev)
 3. Read the [Next.js landing page](https://nextjs.org)
-
-
-
-
-
-
-
-_The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :)_
 
 # Beyond Next.JS
 

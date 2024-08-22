@@ -1,5 +1,5 @@
-> Please help us improve and share your feedback! If you find better tutorials
-> or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
+> [!NOTE]
+> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
 
 <h1 align='center'>
  HackYourFuture - React
@@ -41,23 +41,19 @@ In React 2 we will further expand our skills and learn:
 
 
 
-### [Individual Project (Meal Sharing App)](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project)
-Additionally, you will also implement the UI for your Meal Sharing App project using the skills you learn in this course. :rocket:
+### Individual Project (Meal Sharing App)
+Additionally, you will also implement the UI for your [Meal Sharing App](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project) using the skills you learn in this course. :rocket:
 
 ## Read up before we get started
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=N3AkSS5hXMA" frameborder="0" allowfullscreen></iframe>
+[![Watch the video](https://i3.ytimg.com/vi/N3AkSS5hXMA/maxresdefault.jpg)](https://www.youtube.com/watch?v=N3AkSS5hXMA)
 
 1. Watch the above React introductory video
 2. Read the [React landing page](https://react.dev)
 3. Read the [Next.js landing page](https://nextjs.org)
 
 
-[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/nTQUwghvy5Q)
 
-Watch this [video introduction of React](https://www.youtube.com/watch?v=N3AkSS5hXMA)
-
-<video src="https://www.youtube.com/watch?v=N3AkSS5hXMA" controls></video>
 
 
 

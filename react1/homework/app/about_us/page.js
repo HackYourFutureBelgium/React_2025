@@ -1,10 +1,3 @@
-"use client";
-
-import React from 'react';
-
-import { Navbar } from '../../components/ui/Navbar';
-import { Footer } from '../../components/ui/Footer';
-
 import styles from './page.module.css';
 
 // TASK - React 1 week 1
@@ -16,7 +9,7 @@ const OurValues = () => {
   // TASK - React 1 week 1
   // Create the "Our Values" section
   // Use the descriptions provided in /app/about_us/README.md
-  // Some inspiration ideas found in /app/about_us/inspirations
+  // Some inspiration ideas found in /data/inspiration_about_us
   return (
     <p> ADD OUR VALUES HERE </p>
   );
@@ -27,7 +20,7 @@ const OurCrew = () => {
   // Create the "Our Crew section"
   // Use the descriptions provided in /app/about_us/README.md
   // Use the pictures from /public/crew
-  // Some inspiration ideas found in /app/about_us/inspirations
+  // Some inspiration ideas found in /data/inspiration_about_us
   return (
     <p> ADD OUR CREW HERE </p>
   );
@@ -38,7 +31,7 @@ const OurPartners = () => {
   // Create the "Our Crew section"
   // Use the descriptions provided in /app/about_us/README.md
   // Use the pictures from /public/crew
-  // Some inspiration ideas found in /app/about_us/inspirations
+  // Some inspiration ideas found in /data/inspiration_about_us
   return (
     <p> ADD OUR Partners HERE </p>
   );
@@ -48,7 +41,6 @@ const OurPartners = () => {
 export const Crew = () => {
   return (
     <div className="fullBGpicture">
-      <Navbar />
       <main className="mainContent">
         <h1>About us</h1>
         <section className="card">
@@ -61,11 +53,8 @@ export const Crew = () => {
         </section>
 
          {/* TASK - React 1 week 1 */}
-         {/* Add in the <OurPartners /> component here */}
+         {/* Add in the "OurPartners" component here */}
       </main>
-      {/* TASK - React 1 week 1 */}
-      {/* Import and use the Footer component here */}
-      {/* Footer found in the ui/Footer.js folder */}
     </div>
   );
 }

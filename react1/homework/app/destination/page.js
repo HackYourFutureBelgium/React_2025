@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import { Navbar } from '../../components/ui/Navbar';
-import { Footer } from '../../components/ui/Footer';
-
-import styles from './page.module.css';
-import { AddWishlistItem } from './AddWishlistItem';
+import styles from '@/components/destination/destination.module.css';
+import { AddWishlistItem } from '@/components/destination/AddWishlistItem';
 
 // TASK - React 1 week 2
 // Move this to its own file
@@ -41,7 +38,6 @@ export const Destinations = () => {
 
   return (
     <div className="fullBGpicture">
-      <Navbar />
       <main className="mainContent">
         <h1>Travel destinations</h1>
         <section className="card">
@@ -53,7 +49,7 @@ export const Destinations = () => {
           <p>You have {numberOfPlanets} in your wishlist</p>
           <b>List coming soon after lesson 3!</b>
           
-          {/* STOP! - this is for the week 3!*/}
+          {/* STOP! - this is for week 3!*/}
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
           {/* <AddWishlistItem /> */}
@@ -111,7 +107,6 @@ export const Destinations = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

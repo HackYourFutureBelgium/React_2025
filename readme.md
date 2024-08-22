@@ -6,7 +6,7 @@
 </h1>   
 
 <p align='center'>
-<img src='react-logo.png' width='600px'>  
+<img src='react-logo.png' width='600px'>
 </p>   
 
 
@@ -14,18 +14,9 @@ React is free an open-source frontend JavaScript library for building user inter
 
 This course is divided in 2 modules, of 3 and 2+1 week.
 
-
 ## Module goals
 
-### [React 1](/react1/readme.md)
-- Why use a framework?
-- Thinking the React way
-- Building components
-- Advanced React
-
-### [React 2](/react2/readme.md)
-- Managing state
-- Connecting to node
+![Full React Curriculum](react1/week1/assets/react_curriculum.png)
 
 \+ [Individual Project (Meal Sharing App)](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project)
 
@@ -40,7 +31,7 @@ Also be sure you're familiar with ES6-syntax. This is a handy reference of all f
 
 https://developer.mozilla.org
 
-Please _do not worry about understanding all_. However, do make sure you understand the following, as we'll be using them a lot:
+Please _do not worry about understanding everything_. However, do make sure you understand the following, as we'll be using them a lot:
 
 - [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - [Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
@@ -64,4 +55,3 @@ The following libraries are worth mentioning to use in conjunction with React:
 - **[TypeScript](https://www.typescriptlang.org/)** - a way to annotate ES6 with types
 - **[Redux](https://flowtype.org)** - predictable (application) state container, a Flux implementation
 - **[Tailwind CSS](https://tailwindcss.com/)** - Open-source CSS framework
-- **[Material UI](https://mui.com/material-ui/)** - Open-source React component library that implements Google's Material Design

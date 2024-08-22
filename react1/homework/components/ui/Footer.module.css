@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.hidden {
+  display: none;
+}
+
 .footer h3 {
   color: #000;
   font-size: large;

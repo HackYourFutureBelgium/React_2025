@@ -1,10 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-
-import { Navbar } from '../../components/ui/Navbar';
-import { Footer } from '../../components/ui/Footer';
-
 import styles from './page.module.css';
 
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
@@ -34,7 +30,6 @@ export const NasaCollaboration = () => {
 
   return (
     <div className="fullBGpicture">
-      <Navbar />
       <main className="mainContent">
         <h1>Collaboration with NASA</h1>
         <section className="card">
@@ -70,7 +65,6 @@ export const NasaCollaboration = () => {
             }
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

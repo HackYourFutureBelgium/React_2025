@@ -1,11 +1,12 @@
-import React from 'react';
+"use client"
 
+import { usePathname } from 'next/navigation';
 import styles from './Footer.module.css';
 
-
 export const Footer = () => {
+  const path = usePathname().split('?')[0];
   return (
-    <footer className={styles.footer}>
+    <footer className={path !== "/" ? styles.footer : styles.hidden}>
       <div className={styles.footerDescription}>
         <h3>Galactica</h3>
         <p>Explore the universe and beyond. Your journey to the stars starts here.</p>

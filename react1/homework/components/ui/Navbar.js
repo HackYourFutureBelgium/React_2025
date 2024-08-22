@@ -1,5 +1,4 @@
-import React from 'react';
-
+"use client"
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link'

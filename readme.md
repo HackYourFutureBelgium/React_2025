@@ -1,12 +1,9 @@
-> [!IMPORTANT]
-> The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :blush:
-
-> [!NOTE]
-> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
-
 <h1 align='center'>
  HackYourFuture - React
 </h1>
+
+> [!NOTE]
+> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
 
 <p align='center'>
 <img src='react-logo.png' width='600px'>
@@ -22,7 +19,8 @@ React is free an open-source frontend JavaScript library for building user inter
 
 Next.js is a popular framework which further enhances the development process and performance of our web applications. Next.js builds on top of React by adding several features and optimizations that are often required in modern web applications. 
 
-
+> [!IMPORTANT]
+> The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :blush:
 
 
 ## Module goals

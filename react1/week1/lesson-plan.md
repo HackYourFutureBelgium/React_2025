@@ -1,66 +1,66 @@
 # Lesson Plan
 
 
-#### Why React and Next.js? (10 min)
+### Why React and Next.js? (10 min)
 * Limitations of Javascript
 * Purpose of React
 * Purpose of Node.js
 
-#### Thinking in Components (15 min)
+### Thinking in Components (15 min)
 * What are components?
 * Breaking down UI into reusable components
 * Hierarchy and composition of components
 
-#### Creating and running a Next.js app (10 min)
+### Creating and running a Next.js app (10 min)
 * Creating a new app using `npx create-next-app@latest`
 * folder structure
 * Running the app using `npm run dev`
 
-#### Writing your first static component (20 min)
+### Writing your first static component (20 min)
 * Creating a Functional Component
 * Returning JSX
    * Single Root Element Requirement
    * Fragments
 * Using components inside components
 
-#### Use {} to execute JS inside JSX (10 minutes)
+### Use {} to execute JS inside JSX (10 minutes)
 * Embedding Expressions in JSX
 * Conditional Rendering
 
-#### Setting attributes (5 min)
+### Setting attributes (5 min)
 * HTML attributes
 * className
 
-#### Importing / exporting .jsx (5 min)
+### Importing / exporting .jsx (5 min)
 * defauls exports and named exports
 
-#### Importing .css (5 minutes)
+### Importing .css (5 minutes)
 * Global styles vs. component-specific styles
 * CSS modules in Next.js
 
 
 
-## Exercises
+# Exercises
 
 
-#### 1. Set up a new Next.js project (5 minutes)
+### 1. Set up a new Next.js project (5 minutes)
 - Create a new app using `create-next-app` following [Setting up a new Next.js app](#setting-up-a-new-nextjs-project).
 - Start the web app
 
-#### 2. Writing static components (10 minutes)
+### 2. Writing static components (10 minutes)
 
 - Create a functional component called `Greeting` that returns an `h1` element with the text "Hello, React!".
 - Create a functional component called `Card` that returns a `div` element with a nested `h2` element and a `p` element. The `h2` should display the text "Card Title", and the `p` should display the text "This is a card component".
 
-#### 3. Nesting components (10 minutes)
+### 3. Nesting components (10 minutes)
 
 Create a functional component called `Cards` that renders two instances of the `Card` components from the previous exercise
 
-#### 4. Executing JS inside JSX (10 minutes)
+### 4. Executing JS inside JSX (10 minutes)
 
 Create a functional component called `Person` containing two constants `name` and `age`. The component should display the text: `{name} is an adult` if the age is 18 or higher or `{name} is a minor` if the age is less than 18.
 
-#### 5. Setting properties such as className and value (15 minutes)
+### 5. Setting properties such as className and value (15 minutes)
 
 - Create a functional component called `Button` that renders a `button` element with a `className` prop set to `btn btn-primary`.
 - Create a functional component called `DangerButton` that renders a `button` element with a dangerous text and a `className` prop set to `btn btn btn-primary`.
@@ -68,16 +68,16 @@ Create a functional component called `Person` containing two constants `name` an
 - Create a functional component called `ProfileImage` that renders an image of a person.
 - add all of the above components to your app
 
-#### 6. Import and use components (10 minutes)
+### 6. Import and use components (10 minutes)
 - Move all your components into separate files with defauls exports
 - import the components in your app and use them as before
 
-#### 7. Add basic styling (5 minutes)
+### 7. Add basic styling (5 minutes)
 
 - Create a global CSS file that changes the color of all buttons to blue
 - Add component styles for the `DangerButton` which makes it large and red
 
-#### (Bonus) Create a simple component structure
+### (Bonus) Create a simple component structure
 - Design a basic layout with header, main content, and footer
 - Create separate components for each section
 
@@ -89,7 +89,7 @@ Create a functional component called `Person` containing two constants `name` an
 
 
 
-## Help
+# Help
 
 ### Setting up a new Next.js project
 To create a new Next.js project, you can use the `create-next-app` command provided by [the React.js team](https://react.dev/learn/start-a-new-react-project):

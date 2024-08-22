@@ -10,47 +10,63 @@
 </p>   
 
 
-React is free an open-source frontend JavaScript library for building user interfaces based on UI components.
+React is free an open-source frontend JavaScript library for building user interfaces based on UI components. We will learn React to empower us to build even more complex applications faster.
 
-This course is divided in 2 modules, of 3 and 2+1 week.
+
+<p style="margin-top: 50px" align='center'>
+<img src='nextjs-logo.png' width='400px'>  
+</p>
+
+Next.js is a popular framework which further enhances the development process and performance of our web applications. Next.js builds on top of React by adding several features and optimizations that are often required in modern web applications. 
+
+
+
 
 ## Module goals
 
-![Full React Curriculum](react1/week1/assets/react_curriculum.png)
+This course is divided in 2 modules
 
-\+ [Individual Project (Meal Sharing App)](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project)
+### [React 1](/react1/readme.md) (3 weeks)
+Here we will focus on:
+ - Why we learn React
+ - How to write React components in **JSX**
+ - How to use **props** and **state** in components
+ - How to react to events using **hooks**
 
+### [React 2](/react2/readme.md) (2 weeks)
+In React 2 we will further expand our skills and learn:
+- How to use component libraries
+- How to connect to your Node.js API from the Node.js course
+- How to build scalable web applications using **Context**, **Reducer**, and **Routing**
+
+
+
+### [Individual Project (Meal Sharing App)](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project)
+Additionally, you will also implement the UI for your Meal Sharing App project using the skills you learn in this course. :rocket:
 
 ## Read up before we get started
 
-Watch this video from Facebook about why they started React:
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=N3AkSS5hXMA" frameborder="0" allowfullscreen></iframe>
 
-https://youtu.be/nYkdrAPrdcw
+1. Watch the above React introductory video
+2. Read the [React landing page](https://react.dev)
+3. Read the [Next.js landing page](https://nextjs.org)
 
-Also be sure you're familiar with ES6-syntax. This is a handy reference of all features of ES6:
 
-https://developer.mozilla.org
+[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/nTQUwghvy5Q)
 
-Please _do not worry about understanding everything_. However, do make sure you understand the following, as we'll be using them a lot:
+Watch this [video introduction of React](https://www.youtube.com/watch?v=N3AkSS5hXMA)
 
-- [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-- [Rest Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+<video src="https://www.youtube.com/watch?v=N3AkSS5hXMA" controls></video>
 
-Read about React here:
 
-https://react.dev
 
-Read about Next.JS here:
-
-https://nextjs.org
 
 _The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :)_
 
 # Beyond Next.JS
 
-The following libraries are worth mentioning to use in conjunction with React:
+Unfortunately, we won't be able to cover all areas of React in this course, but only the essentials. There are a lot of powerful tools out there for you to learn after you finish this course such as:
 
 - **[TypeScript](https://www.typescriptlang.org/)** - a way to annotate ES6 with types
 - **[Redux](https://flowtype.org)** - predictable (application) state container, a Flux implementation

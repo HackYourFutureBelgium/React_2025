@@ -4,7 +4,7 @@
 ### Why React and Next.js? (10 min)
 * Limitations of Javascript
 * Purpose of React
-* Purpose of Node.js
+* Purpose of Next.js
 
 ### Thinking in Components (15 min)
 * What are components?
@@ -68,14 +68,19 @@ Create a functional component called `Person` containing two constants `name` an
 - Create a functional component called `ProfileImage` that renders an image of a person.
 - add all of the above components to your app
 
-### 6. Import and use components (10 minutes)
+### 6. Create sub pages (5 minutes)
+- Create a subpage `/why-us` with a list of 3 reasons your site is worth visiting
+- Create two subpages `/products/{your product name}` for two fictional products your site contains. Add a simple header with the product name on both pages.
+
+### 7. Import and use components (10 minutes)
 - Move all your components into separate files with defauls exports
 - import the components in your app and use them as before
 
-### 7. Add basic styling (5 minutes)
+### 8. Add basic styling (5 minutes)
 
 - Create a global CSS file that changes the color of all buttons to blue
 - Add component styles for the `DangerButton` which makes it large and red
+
 
 ### (Bonus) Create a simple component structure
 - Design a basic layout with header, main content, and footer

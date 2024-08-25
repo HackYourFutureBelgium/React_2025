@@ -1,5 +1,4 @@
 "use client"
-import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link'
 
@@ -21,7 +20,11 @@ const navbarItems = [
 ];
 
 export const Navbar = () => {
-  const currentPath = usePathname()
+  const currentPath = usePathname();
+
+  const isLinkActive = (link) => {
+    return link === currentPath ? 'active' : undefined;
+  };
 
   return (
     <header className={styles.headerContainer}>
@@ -35,19 +38,13 @@ export const Navbar = () => {
           {/* TASK - React 1 week 2 */}
           {/* Create a <NavItem> component, which accepts the following:  */}
           {/* title, link, isActive  */}
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[0].link === currentPath,
-          })}>
+          <li is-active={isLinkActive(navbarItems[0].link)} className={styles.navbarLinks}>
             <Link href={navbarItems[0].link}><b>01</b> {navbarItems[0].title}</Link>
           </li>
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[1].link === currentPath,
-          })}>
+          <li is-active={isLinkActive(navbarItems[1].link)} className={styles.navbarLinks}>
             <Link href={navbarItems[1].link}><b>02</b> {navbarItems[1].title}</Link>
           </li>
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[2].link === currentPath,
-          })}>
+          <li is-active={isLinkActive(navbarItems[2].link)} className={styles.navbarLinks}>
             <Link href={navbarItems[2].link}><b>03</b> NASA COLLABORATION</Link>
           </li>
           {/* TASK - React 1 week 3 */}

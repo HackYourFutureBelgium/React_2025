@@ -71,7 +71,7 @@
   letter-spacing: 1px;
 }
 
-.navbarLinks:hover, .isLinkActive {
+.navbarLinks:hover, .navbarLinks[is-active] {
   border-block-end: var(--spacing-04) solid var(--border-color);
   margin-block-end: -4px;
 }

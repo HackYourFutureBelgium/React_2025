@@ -77,7 +77,7 @@ function Wrapper({ children }) {
 }
 ```
 
-## f. Conditional Rendering with Props (5 minutes)
+## Conditional Rendering with Props (5 minutes)
 
 ### Using props to conditionally render content
 

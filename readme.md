@@ -6,7 +6,7 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
 
 <p align='center'>
-<img src='react-logo.png' width='600px'>
+<img src='assets/react-logo.png' width='600px'>
 </p>   
 
 
@@ -14,14 +14,13 @@ React is free an open-source frontend JavaScript library for building user inter
 
 
 <p style="margin-top: 50px" align='center'>
-<img src='nextjs-logo.png' width='400px'>  
+<img src='assets/nextjs-logo.png' width='400px'>  
 </p>
 
 Next.js is a popular framework which further enhances the development process and performance of our web applications. Next.js builds on top of React by adding several features and optimizations that are often required in modern web applications. 
 
 > [!IMPORTANT]
 > The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :blush:
-
 
 ## Module goals
 
@@ -55,5 +54,5 @@ Additionally, you will also implement the UI for your [Meal Sharing App](https:/
 Unfortunately, we won't be able to cover all areas of React in this course, but only the essentials. There are a lot of powerful tools out there for you to learn after you finish this course such as:
 
 - **[TypeScript](https://www.typescriptlang.org/)** - a way to annotate ES6 with types
-- **[Redux](https://flowtype.org)** - predictable (application) state container, a Flux implementation
+- **[Redux](https://redux.js.org)** - predictable (application) state container, a Flux implementation
 - **[Tailwind CSS](https://tailwindcss.com/)** - Open-source CSS framework

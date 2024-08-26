@@ -63,7 +63,7 @@ Create a functional component called `Person` containing two constants `name` an
 ### 5. Setting properties such as className and value (15 minutes)
 
 - Create a functional component called `Button` that renders a `button` element with a `className` prop set to `btn btn-primary`.
-- Create a functional component called `DangerButton` that renders a `button` element with a dangerous text and a `className` prop set to `btn btn btn-primary`.
+- Create a functional component called `DangerButton` that renders a `button` element with a dangerous text and a `className` prop set to `btn btn-primary`.
 - Create a functional component called `TextInput` that renders a text input field with a placeholder value `Type something here`.
 - Create a functional component called `ProfileImage` that renders an image of a person.
 - add all of the above components to your app

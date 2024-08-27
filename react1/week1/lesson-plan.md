@@ -6,7 +6,7 @@
 * Purpose of React
 * Purpose of Next.js
 
-### Thinking in Components (15 min)
+### Thinking in Components (10 min)
 * What are components?
 * Breaking down UI into reusable components
 * Hierarchy and composition of components
@@ -15,6 +15,11 @@
 * Creating a new app using `npx create-next-app@latest`
 * folder structure
 * Running the app using `npm run dev`
+
+### Basic Routing (10 minutes)
+* Explanation of routes
+* Creating subfolders in `app` directory with `page.jsx` file.
+* Create a component that defines a page
 
 ### Writing your first static component (20 min)
 * Creating a Functional Component
@@ -37,8 +42,6 @@
 ### Importing .css (5 minutes)
 * Global styles vs. component-specific styles
 * CSS modules in Next.js
-
-
 
 # Exercises
 
@@ -66,17 +69,13 @@ Create a functional component called `Person` containing two constants `name` an
 - Create a functional component called `DangerButton` that renders a `button` element with a dangerous text and a `className` prop set to `btn btn-primary`.
 - Create a functional component called `TextInput` that renders a text input field with a placeholder value `Type something here`.
 - Create a functional component called `ProfileImage` that renders an image of a person.
-- add all of the above components to your app
+- Add all of the above components to your app
 
 ### 6. Create sub pages (5 minutes)
 - Create a subpage `/why-us` with a list of 3 reasons your site is worth visiting
-- Create two subpages `/products/{your product name}` for two fictional products your site contains. Add a simple header with the product name on both pages.
+- Create two subpages `/products/{product name}` for two fictional products your site contains. Add a simple header with the product name on both pages.
 
-### 7. Import and use components (10 minutes)
-- Move all your components into separate files with defauls exports
-- import the components in your app and use them as before
-
-### 8. Add basic styling (5 minutes)
+### 7. Add basic styling (5 minutes)
 
 - Create a global CSS file that changes the color of all buttons to blue
 - Add component styles for the `DangerButton` which makes it large and red

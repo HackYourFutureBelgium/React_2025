@@ -1,5 +1,5 @@
 # Lesson Plan
-
+## Part 1
 
 ### Why React and Next.js? (10 min)
 * Limitations of Javascript
@@ -20,6 +20,8 @@
 * Explanation of routes
 * Creating subfolders in `app` directory with `page.jsx` file.
 * Create a component that defines a page
+
+## Part 2
 
 ### Writing your first static component (20 min)
 * Creating a Functional Component
@@ -45,6 +47,7 @@
 
 # Exercises
 
+## Part 1
 
 ### 1. Set up a new Next.js project (5 minutes)
 - Create a new app using `create-next-app` following [Setting up a new Next.js app](#setting-up-a-new-nextjs-project).
@@ -62,6 +65,8 @@ Create a functional component called `Cards` that renders two instances of the `
 ### 4. Executing JS inside JSX (10 minutes)
 
 Create a functional component called `Person` containing two constants `name` and `age`. The component should display the text: `{name} is an adult` if the age is 18 or higher or `{name} is a minor` if the age is less than 18.
+
+## Part 2
 
 ### 5. Setting properties such as className and value (15 minutes)
 

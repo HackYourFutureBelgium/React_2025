@@ -67,7 +67,8 @@
 
 - **Create a blog website with dynamic routes to different blog posts**
   - Create a route /blogs that displays blogs
-  - Create a dynamic route for a blog post that displays the title from the route. For example, `/blogs/my-new-post` should dynamically display "My New Post". Hint: Look at `usePathName`.
+  - Create a dynamic route for a blog post that displays the title from the route. For example, `/blogs/my-new-post` should dynamically display "My New Post".
+  - Hint: Check out the [documentation](https://nextjs.org/docs/app/api-reference/functions/use-pathname) for `usePathName`.
 
 - **Create a page that displays a NASA EPIC image on a different date depending on a query string parameter received**
   - Use the [NASA API](https://api.nasa.gov/#EPIC) to fetch EPIC images
@@ -75,25 +76,6 @@
   - Fetch and display the EPIC image for the specified date
 
 ## Advanced Components 2.1 Lecture (30 minutes)
-
-### Introduction to Component Libraries (20 minutes)
-
-- **What are component libraries?**
-  - Explain the concept of component libraries
-  - Discuss the benefits of using component libraries
-
-- **Benefits of using component libraries (consistency, reusability, accessibility)**
-  - Consistent design and branding across the application
-  - Reusable components for faster development
-  - Built-in accessibility features
-
-- **Popular component library (Material-UI)**
-  - Introduce Material-UI as a popular React component library
-  - Showcase some commonly used Material-UI components
-
-- **How to install and use a component library**
-  - Demonstrate how to install Material-UI in a Next.js application
-  - Show how to import and use Material-UI components
 
 ### Using Refs in React (10 minutes)
 
@@ -110,6 +92,25 @@
 
 - **Handling focus, text selection, and media playback using refs**
   - Provide examples of using refs for focus management, text selection, and media playback
+
+### Component Libraries (20 minutes)
+
+- **What are component libraries?**
+  - Explain the concept of component libraries
+  - Discuss the benefits of using component libraries
+
+- **Benefits of using component libraries**
+  - Consistency: Consistent design and branding across the application
+  - Reusability: Reusable components for faster development
+  - Accessibility: Built-in accessibility features
+
+- **Popular component library (Material-UI)**
+  - Introduce Material-UI as a popular React component library
+  - Showcase some commonly used Material-UI components
+
+- **How to install and use a component library**
+  - Demonstrate how to install Material-UI in a Next.js application
+  - Show how to import and use Material-UI components
 
 ## Advanced Components 2.1 Exercises (30 minutes)
 

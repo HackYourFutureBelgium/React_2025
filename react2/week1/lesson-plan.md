@@ -130,11 +130,11 @@
 
 - **Build a sign up form**
   - Create a sign-up form with first name, last name, email and phone number fields.
-  - Optionally using Material-UI for certain components
+  - Use Material-UI where possible for certain components (_not recommended for the input fields_)
 
 - **Use refs to manage focus on input fields**
   - Notice if MUI is used for the inputs the fact that the ref prop is called [inputRef](https://mui.com/material-ui/api/input/) in MUI
-  - Create refs for input fields using the `useRef` hook
+  - Create refs for the input fields using the `useRef` hook
   - Implement focus management using refs (e.g., focus on the next field after entering data)
 
 - **Implement form validation and highlight invalid fields**

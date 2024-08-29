@@ -17,8 +17,7 @@
 - **Overview of Next.js routing system**
   - File-based routing system in Next.js
   - Dynamic Routes
-  - Mention the Next.js Link Component
-  - Discuss the difference between the traditional React Router and Next.js App Router
+  - Mention the Next.js Link Component & why it is used
 
 - **Advantages over traditional client-side routing**
   - Improved performance with built-in server-side rendering and static site generation
@@ -64,16 +63,11 @@
 - **Render fetched data in the component**
   - Display the fetched photos and captions in the component
 
-### 3. Routing and Navigation Exercise (15 minutes)
-
-- **Create a navigation menu using the useRouter hook and when a user clicks on a link it navigates them to the relevant page with the router instead of a link**
-  - Create a navigation menu with links to different pages
-  - Use the `useRouter` hook to handle navigation
-  - Implement redirects when a link is clicked
+### 3. Routing and Navigation Exercise (10 minutes)
 
 - **Create a blog website with dynamic routes to different blog posts**
   - Create a route /blogs that displays blogs
-  - Create a dynamic route for a blog post that displays the title from the route
+  - Create a dynamic route for a blog post that displays the title from the route. For example, `/blogs/my-new-post` should dynamically display "My New Post". Hint: Look at `usePathName`.
 
 - **Create a page that displays a NASA EPIC image on a different date depending on a query string parameter received**
   - Use the [NASA API](https://api.nasa.gov/#EPIC) to fetch EPIC images
@@ -117,9 +111,9 @@
 - **Handling focus, text selection, and media playback using refs**
   - Provide examples of using refs for focus management, text selection, and media playback
 
-## Advanced Components 2.1 Exercises (20 minutes)
+## Advanced Components 2.1 Exercises (30 minutes)
 
-### 4. Build a Responsive Navbar (10 minutes)
+### 4. Build a Responsive Navbar with links to various pages (15 minutes)
 
 - **Use a component library (Material-UI) to create a responsive navbar**
   - Import and use the necessary Material-UI components
@@ -128,7 +122,11 @@
 - **Implement dynamic rendering to show/hide menu items based on screen size**
   - Use conditional rendering to show/hide menu items based on the screen size
 
-### 5. Create a Form with Focus Management (10 minutes)
+- **When a user clicks on an item, navigate them to the relevant page with a router or link**
+  - Use the `useRouter` hook to handle navigation or a `Link` component
+  - Implement redirects when a link is clicked
+
+### 5. Create a Form with Focus Management (15 minutes)
 
 - **Build a sign up form**
   - Create a sign-up form with first name, last name, email and phone number fields.
@@ -142,3 +140,7 @@
 - **Implement form validation and highlight invalid fields**
   - Add form validation logic
   - Highlight invalid input fields using styles or Material-UI components
+
+- **Redirect the user to the home page after form gets submitted**
+- Add an event listener for form submit
+- Once the user clicks it redirect them to a different page using the router.

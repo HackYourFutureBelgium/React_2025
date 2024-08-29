@@ -1,33 +1,114 @@
-# Lesson Plan - Connecting to node
+# Lesson Plan
 
-- A backend app that runs node.js with express. The node api uses an in-memory list, React can "GET" and "POST" to the list
-- React router
-- Frontend validation
+## Contexts 2.2 Lecture (40 minutes)
 
-## Code inspiration
-  Link to app
+### Introduction to Context API (10 minutes)
 
-### Node React
+- **What is the Context API?**
+  - Explain the purpose of the Context API in React
+  - Discuss the problems it solves (prop drilling, global state management)
 
-#### Backstory: 
-You have been hired in a company to maintain a web application, congratulations! 🎉🎉🎉
-The application can submit and display shifts and uses React to communicate with a backend written in node.js/express.
-On the first day on your new job you are handed a bug report by the QA person. 
-'Since they hired you to be the new expert, this should be a breeze' he says. 
+- **When to use Context API?**
+  - Provide guidelines on when to use the Context API
+  - Discuss scenarios where Context API is useful (theming, localization, authentication, etc.)
 
-### EXERCISE:
+- **Benefits of using Context API**
+  - Highlight the benefits of using the Context API
+  - Discuss how it simplifies state management and component communication
 
-1. Clone the app and get it running. First start the backend, then the frontend.
-2. Go through the bug report and discuss which bugs you prioritize.
+### Creating a Context (15 minutes)
 
-### BUG REPORT: 🪲🪲🪲
+- **Setting up a Context**
+  - Demonstrate how to create a new Context using the `createContext` function
+  - Explain the purpose of the default value in `createContext`
 
-1. A link leading to the shift submission page is missing on the shifts overview page.
-2. The user can submit a shift where the endDate is before the start date.
-3. A user name with numbers can be submitted.
-4. The shifts list should be searchable and only show the 10 latest submissions. Each shift should therefore include a timestamp so that it can be sorted.
-5. The app looks terrible! Please add some styling.
-6. The input error validation should be specific to the error.
+- **Creating a Context Provider**
+  - Show how to create a Context Provider component
+  - Discuss the role of the Provider in providing context values
 
+- **Providing value to Context**
+  - Demonstrate how to provide context values using the `value` prop of the Provider
 
-Please, feel free to give us some feedback about your experience teaching React [here](https://forms.gle/usuv9u1HMdjkqqzu8), or with homework reviews [here](https://forms.gle/Ai5vrCiCnYs1bMmh9).
+### Introduction to Reducers (15 minutes)
+
+- **What is a Reducer?**
+  - Explain the concept of a reducer function in React
+  - Discuss the relationship between reducers and state management
+
+- **Why use Reducers?**
+  - Highlight the benefits of using reducers for state management
+  - Discuss scenarios where reducers are useful (complex state updates, centralized state management)
+
+- **Reducer syntax and structure**
+  - Introduce the reducer function syntax (state, action) => newState
+  - Explain the purpose of actions and action types
+  - Demonstrate how to update state based on actions in a reducer
+
+## Contexts 2.2 Exercises (30 minutes)
+
+### 1. Implementing a Theme Context (15 minutes)
+
+- **Implementing a theme context using our own context provider**
+  - Create a context for managing the application theme
+  - Implement a context provider component to provide the theme value
+  - Use the context in a component to consume the theme value
+
+- **Implementing a theme context using Material UI**
+  - Explore the [Material-UI theme provider](https://mui.com/material-ui/customization/theming/) and theme consumer
+  - Implement a theme context using Material
+
+### 2. Set up localization (15 minutes)
+
+- **Set up localization using Material UI**
+- Use the [localization component](https://mui.com/material-ui/guides/localization/) with the theme context
+- Provide language data to the Context
+- Consume and display the language in a component
+
+## Contexts with Reducers 2.2 Lecture (20 minutes)
+
+### Combining Context and Reducers (20 minutes)
+
+- **Passing Reducer dispatch function via Context**
+  - Explain how to pass the dispatch function from the reducer to components via Context
+  - Demonstrate how to create a context and provide the dispatch function as part of the context value
+
+- **Updating state using the dispatch function**
+  - Show how components can access the dispatch function from the context
+  - Demonstrate how to dispatch actions to update the state using the reducer
+
+## Contexts with Reducers 2.2 Exercises (30 minutes)
+
+### 3. Build a CounterContext with Reducer (15 minutes)
+
+- **Create a CounterContext**
+  - Set up a new context for managing a counter state
+
+- **Implement a Reducer for increment and decrement actions**
+  - Define a reducer function to handle increment and decrement actions
+  - Update the counter state based on the received actions
+
+- **Consume the CounterContext and update the count**
+  - Create a component that consumes the CounterContext
+  - Implement buttons or UI elements to dispatch increment and decrement actions
+  - Display the current count value from the context
+
+### 4. Create a TodoContext with Reducer (15 minutes)
+
+- **Set up a TodoContext with a Reducer**
+  - Create a new context for managing a todo list state
+  - Define a reducer function to handle actions related to todos (add, remove, toggle)
+
+- **Implement actions for adding, removing, and toggling todos**
+  - Define action types and action creators for adding, removing, and toggling todos
+  - Update the todo list state based on the received actions in the reducer
+
+- **Consume the TodoContext and display the todo list**
+  - Create a component that consumes the TodoContext
+  - Render the todo list using the state from the context
+
+- **Use the TodoContext in a Next.js page**
+  - Import and consume the TodoContext in a Next.js page component
+
+- **Add functionality to add and remove todos**
+  - Implement UI elements (input, buttons) to dispatch actions for adding and removing todos
+  - Use the dispatch function from the context to update the todo list state

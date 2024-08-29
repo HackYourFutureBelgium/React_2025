@@ -1,135 +1,144 @@
-# Contexts & Routing
+# Lesson Plan
 
-## Context 2.1 Lecture (40 minutes)
+## Advanced Routing 2.1 Lecture (40 minutes)
 
-### a. Introduction to Context (5 minutes)
+### Server-Side Rendering (SSR) and Static Site Generation (SSG) (10 minutes)
 
-The React Context API is a way to pass data through the component tree without having to pass props down manually at every level. It helps to solve the problem of prop drilling, where props are passed from a top-level component to a deeply nested component.
+- **Explanation of SSR and SSG**
+  - Define Server-Side Rendering (SSR) and Static Site Generation (SSG)
+  - Explain the benefits of SSR and SSG over client-side rendering
 
-**When to use Context?**
-- When you have data that needs to be accessed by many components at different nested levels.
-- When you want to share global state across the application.
+- **Use cases for SSR and SSG**
+  - Discuss when to use SSR (dynamic data, personalization, etc.)
+  - Discuss when to use SSG (static content, blogs, documentation, etc.)
 
-**Benefits of Context over prop drilling:**
-- Avoids the need to pass props through multiple levels of components.
-- Makes the code more maintainable and easier to refactor.
-- Promotes code reuse by allowing components to subscribe to the same context.
+### Introduction to Next.js App Router (15 minutes)
 
-### b. Creating a Context (10 minutes)
+- **Overview of Next.js routing system**
+  - File-based routing system in Next.js
+  - Dynamic Routes
+  - Mention the Next.js Link Component
+  - Discuss the difference between the traditional React Router and Next.js App Router
 
-Creating a context in React involves two steps:
+- **Advantages over traditional client-side routing**
+  - Improved performance with built-in server-side rendering and static site generation
+  - Simplified routing configuration
+  - Nested layouts and nested routes
 
-1. **Creating the context object:**
+### Next.js Router Hooks (15 minutes)
 
-```jsx
-import { createContext } from 'react';
+- **Understanding the usePathname hook**
+  - Explain the purpose of the `usePathname` hook
+  - Demonstrate how to use `usePathname` to access the current path
 
-const MyContext = createContext();
-```
+- **Understanding the useSearchParams hook**
+  - Explain the purpose of the `useSearchParams` hook
+  - Demonstrate how to use `useSearchParams` to access the query strings
 
-2. **Setting up the provider component:**
+- **Working with the useRouter hook**
+  - Discuss the need for redirects in web applications (authentication, URL changes, etc.)
+  - Introduce the `useRouter` hook
+  - Explain how to access various router properties (push, replace, etc.)
+  - Demonstrate programmatic navigation using `router.push` and `router.replace`
 
-```jsx
-import { createContext } from 'react';
+## Advanced Routing 2.1 Exercises (45 minutes)
 
-const MyContext = createContext();
+### Server-Side Rendering (SSR) (10 minutes)
 
-const MyProvider = ({ children, value }) => {
-  return <MyContext.Provider value={value}>{children}</MyContext.Provider>;
-};
+### 1. Create a page that renders the NASA Astronomy Picture of the Day (with caption) using data fetching
 
-export { MyContext, MyProvider };
-```
+- Use the [NASA API](https://api.nasa.gov/#MarsPhotos) to fetch the Astronomy Picture of the Day data
+- Implement [server-side rendering](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching) to fetch the data during the render process
+- Render the fetched image and caption on the page
 
-The `Provider` component is used to wrap the components that need access to the context value. It accepts a `value` prop, which is the data that will be shared across the component tree.
+### 2. Dynamic Rendering with useEffect (15 minutes)
 
-### c. Consuming Context (10 minutes)
+- **Create a component that fetches NASA Mars Rover Photos from an API (with caption)**
+  - Use the [NASA API](https://api.nasa.gov/#MarsPhotos) to fetch Mars Rover photos
+  - Implement [client-side data fetching](https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering) using the `useEffect` hook
 
-To consume the context value in a component, you can use the `useContext` hook:
+- **Use useEffect to fetch data on component mount**
+  - Fetch the data when the component mounts
+  - Handle component unmount and dependency updates
 
-```jsx
-import { useContext } from 'react';
-import { MyContext } from './MyContext';
+- **Render fetched data in the component**
+  - Display the fetched photos and captions in the component
 
-const MyComponent = () => {
-  const contextValue = useContext(MyContext);
+### 3. Routing and Navigation Exercise (15 minutes)
 
-  // Use the contextValue in your component
-  return <div>{contextValue}</div>;
-};
-```
+- **Create a navigation menu using the useRouter hook and when a user clicks on a link it navigates them to the relevant page with the router instead of a link**
+  - Create a navigation menu with links to different pages
+  - Use the `useRouter` hook to handle navigation
+  - Implement redirects when a link is clicked
 
-The `useContext` hook subscribes the component to context changes. When the context value changes, the component will re-render with the new value.
+- **Create a blog website with dynamic routes to different blog posts**
+  - Create a route /blogs that displays blogs
+  - Create a dynamic route for a blog post that displays the title from the route
 
-To update the context value, you need to update the value prop of the `Provider` component.
+- **Create a page that displays a NASA EPIC image on a different date depending on a query string parameter received**
+  - Use the [NASA API](https://api.nasa.gov/#EPIC) to fetch EPIC images
+  - Access the query string parameter using `router.query`
+  - Fetch and display the EPIC image for the specified date
 
-### d. Multiple Contexts (10 minutes)
+## Advanced Components 2.1 Lecture (30 minutes)
 
-You can create multiple contexts in your application to manage different types of state. This helps to structure your application state and make it more maintainable.
+### Introduction to Component Libraries (20 minutes)
 
-```jsx
-// ThemeContext.js
-import { createContext } from 'react';
+- **What are component libraries?**
+  - Explain the concept of component libraries
+  - Discuss the benefits of using component libraries
 
-const ThemeContext = createContext();
+- **Benefits of using component libraries (consistency, reusability, accessibility)**
+  - Consistent design and branding across the application
+  - Reusable components for faster development
+  - Built-in accessibility features
 
-// UserContext.js
-import { createContext } from 'react';
+- **Popular component library (Material-UI)**
+  - Introduce Material-UI as a popular React component library
+  - Showcase some commonly used Material-UI components
 
-const UserContext = createContext();
-```
+- **How to install and use a component library**
+  - Demonstrate how to install Material-UI in a Next.js application
+  - Show how to import and use Material-UI components
 
-You can then use these contexts in different parts of your application:
+### Using Refs in React (10 minutes)
 
-```jsx
-import { ThemeProvider } from './ThemeContext';
-import { UserProvider } from './UserContext';
+- **What are refs and their use cases?**
+  - Explain the purpose of refs in React
+  - Discuss common use cases for refs (focus management, integration with third-party libraries, etc.)
 
-const App = () => {
-  return (
-    <ThemeProvider>
-      <UserProvider>
-        {/* Components that need access to theme and user context */}
-      </UserProvider>
-    </ThemeProvider>
-  );
-};
-```
+- **Creating refs with useRef hook**
+  - Introduce the `useRef` hook
+  - Demonstrate how to create a ref using `useRef`
 
-### e. Context Performance Considerations (5 minutes)
+- **Accessing DOM elements with refs**
+  - Show how to access and manipulate DOM elements using refs
 
-While the Context API is a powerful tool, it's important to be mindful of its performance implications.
+- **Handling focus, text selection, and media playback using refs**
+  - Provide examples of using refs for focus management, text selection, and media playback
 
-**When context causes re-renders:**
-When a context value changes, all components subscribed to that context will re-render, even if they don't use the updated value. This can lead to unnecessary re-renders and performance issues.
+## Advanced Components 2.1 Exercises (20 minutes)
 
-**Using memoization and reference equality:**
-To avoid unnecessary re-renders, you can use memoization techniques like `React.memo` or `useMemo` to memoize components or values that don't need to re-render or recalculate when the context value changes.
+### 4. Build a Responsive Navbar (10 minutes)
 
-**Code splitting and lazy loading contexts:**
-If you have a large application with multiple contexts, consider code splitting and lazy loading contexts to improve the initial load time and reduce the bundle size.
+- **Use a component library (Material-UI) to create a responsive navbar**
+  - Import and use the necessary Material-UI components
+  - Implement a responsive navbar with a hamburger menu for smaller screens
 
-## Context 2.1 Exercises (30 minutes)
+- **Implement dynamic rendering to show/hide menu items based on screen size**
+  - Use conditional rendering to show/hide menu items based on the screen size
 
-### a. Create a ThemeContext (10 minutes)
+### 5. Create a Form with Focus Management (10 minutes)
 
-1. Create a new file called `ThemeContext.js`.
-2. Import `createContext` from 'react'.
-3. Create a new context using `createContext()` and export it.
-4. Create a `ThemeProvider` component that wraps the `Provider` component from the context you created.
-5. Export the `ThemeProvider` component.
+- **Build a sign up form**
+  - Create a sign-up form with first name, last name, email and phone number fields.
+  - Optionally using Material-UI for certain components
 
-### b. Consume ThemeContext (10 minutes)
+- **Use refs to manage focus on input fields**
+  - Notice if MUI is used for the inputs the fact that the ref prop is called [inputRef](https://mui.com/material-ui/api/input/) in MUI
+  - Create refs for input fields using the `useRef` hook
+  - Implement focus management using refs (e.g., focus on the next field after entering data)
 
-1. Import the `ThemeContext` and `useContext` hook from 'react'.
-2. In a component where you want to access the theme values, use the `useContext` hook to get the context value.
-3. Apply the theme styles based on the context value.
-
-### c. Update ThemeContext (10 minutes)
-
-1. In the `ThemeProvider` component, define a state variable to store the current theme (e.g., 'light' or 'dark').
-2. Create a function to toggle the theme.
-3. Pass the theme value and the toggle function as the value prop to the `Provider` component.
-4. In a component where you want to update the theme, import the `useContext` hook and the `ThemeContext`.
-5. Use the `useContext` hook to get the theme value and the toggle function.
-6. Implement a button or switch that calls the toggle function when clicked or toggled.
+- **Implement form validation and highlight invalid fields**
+  - Add form validation logic
+  - Highlight invalid input fields using styles or Material-UI components

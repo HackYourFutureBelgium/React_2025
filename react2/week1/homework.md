@@ -6,21 +6,7 @@ Need to brush up on the homework setup process? Check [this](https://github.com/
 
 This week the homework will result in 2 PRs: 1 in your homework repository and 1 in the Meal Sharing repository.
 
-
-## GitHub users search
-
-Your homework will be searching GitHub users based on what you type in the input. Use this API: `https://api.github.com/search/users?q=${query}`
-
-Requirements:
-
-- When the search is loading, you should show "loading..."
-- When the search is failed, you should show "error fetching (reason why it failed)..."
-- When the search result is empty (no users), you should show "No results..."
-- All state should be managed using the context api!
-
-![Homework preview](assets/homework-preview.gif)
-
-Try the website here: https://ro6ne.csb.app/
+The homework for this week are the class exercises, along with the meal sharing app.
 
 ## Meal sharing
 

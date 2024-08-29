@@ -1,6 +1,5 @@
 # Preparation
 
-- Referencing Values with Refs https://react.dev/learn/referencing-values-with-refs
-- Manipulating the DOM with Refs https://react.dev/learn/manipulating-the-dom-with-refs
-- useRef https://react.dev/reference/react/useRef
-- forwardRef https://react.dev/reference/react/forwardRef
+- [Context](https://react.dev/learn/passing-data-deeply-with-context) (10 min)
+- [Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) (10 min)
+- [Combining reducers with context](https://react.dev/learn/scaling-up-with-reducer-and-context) (15 min)

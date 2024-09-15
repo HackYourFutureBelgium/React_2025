@@ -42,12 +42,10 @@
 
 ## Advanced Routing 2.1 Exercises (45 minutes)
 
-### Server-Side Rendering (SSR) (10 minutes)
-
-### 1. Create a page that renders the NASA Astronomy Picture of the Day (with caption) using data fetching
+### 1. Create a page that renders the NASA Astronomy Picture of the Day (with caption) using Server Side Rendering (10 minutes)
 
 - Use the [NASA API](https://api.nasa.gov/#MarsPhotos) to fetch the Astronomy Picture of the Day data
-- Implement [server-side rendering](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching) to fetch the data during the render process
+- Implement [data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching) to fetch the data during the render
 - Render the fetched image and caption on the page
 
 ### 2. Dynamic Rendering with useEffect (15 minutes)

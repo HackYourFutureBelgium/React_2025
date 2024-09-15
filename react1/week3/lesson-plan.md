@@ -18,7 +18,7 @@
 
 ## Part 2
 
-### Introduction to Hooks (15 min)
+### Introduction to Hooks (10 min)
 * Rules of Hooks
 * Life cycles
 * Effects for synchronization
@@ -33,7 +33,7 @@
 * Implementing initial page load with loading wheel
 
 
-
+### Introduction to Meal Sharing app (5 min)
 
 # Exercises
 

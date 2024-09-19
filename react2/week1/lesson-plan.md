@@ -70,7 +70,7 @@
 
 - **Create a page that displays a NASA EPIC image on a different date depending on a query string parameter received**
   - Use the [NASA API](https://api.nasa.gov/#EPIC) to fetch EPIC images
-  - Access the query string parameter using `router.query`
+  - Access the query string parameter using `useSearchParams`
   - Fetch and display the EPIC image for the specified date
 
 ## Advanced Components 2.1 Lecture (30 minutes)

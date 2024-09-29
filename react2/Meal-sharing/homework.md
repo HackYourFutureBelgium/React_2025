@@ -11,7 +11,7 @@ This page provides you with:
 - `/future-meals`
 - `/past-meals`
 - `/all-meals`
-- `/first-meal` 
+- `/first-meal`
 - `/last-meal`
 
 [Full description](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/homework/readme.md#meal-sharing-endpoints)
@@ -110,5 +110,3 @@ Showing available spots:
 > Bonus: How can you update this information every 5 seconds?
 
 Once those 3 tasks are done and you have time over, feel free to polish your application, you can find lots of examples [here](./design-inspo.md).
-
-To finish up the project, deploy your app to [Render.com](https://render.com/) based on the instructions [here](https://github.com/HackYourFuture-CPH/hyf-project-template?tab=readme-ov-file#deploying).

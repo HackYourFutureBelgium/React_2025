@@ -1,5 +1,7 @@
 # Homework
 
+The homework for this week is to finish the class exercises and continue working on the meal sharing app, just like the previous week.
+
 ## Meal sharing app continued
 
 Let's create some routing in your `meal-sharing` repo!

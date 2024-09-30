@@ -33,16 +33,15 @@ Here we will focus on:
  - How to use **props** and **state** in components
  - How to react to events using **hooks**
 
-### [React 2](/react2/readme.md) (2 weeks)
+### [React 2](/react2/readme.md) (3 weeks)
 In React 2 we will further expand our skills and learn:
 - How to use component libraries
 - How to connect to your Node.js API from the Node.js course
 - How to build scalable web applications using **Context**, **Reducer**, and **Routing**
 
+#### Individual Project (Meal Sharing App)
 
-
-### Individual Project (Meal Sharing App)
-Additionally, you will also implement the UI for your [Meal Sharing App](https://github.com/HackYourFuture-CPH/React/blob/main/react2/readme.md#individual-project) using the skills you learn in this course. :rocket:
+Additionally, you will also implement the UI for your [Meal Sharing App](/react2/Meal-sharing/homework.md) using the skills you learn in this course. :rocket:
 
 ## Read up before we get started
 1. Watch the [React introductory video](https://www.youtube.com/watch?v=N3AkSS5hXMA)

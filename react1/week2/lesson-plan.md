@@ -97,10 +97,6 @@
 ### Importing / exporting .jsx (5 min)
 * defauls exports and named exports
 
-### Importing .css (5 minutes)
-* Global styles vs. component-specific styles
-* CSS modules in Next.js
-
 # Exercises
 
 ## Part 1
@@ -141,22 +137,14 @@
 3. Implement functions to increment and decrement the count.
 4. Render the current count value and buttons to call the increment and decrement functions.
 
-### 6. Build a Todo List component (15 minutes)
-
-1. Create a new component called `TodoList`.
-2. Use the `useState` hook to manage an array of todo items.
-3. Implement a function to add a new todo item to the array.
-4. Implement a function to remove a todo item from the array.
-5. Render the list of todo items, an input field to add new todos, and buttons to remove todos.
-
-### 7. Develop a Form component (10 minutes)
+### 6. Develop a Form component (10 minutes)
 
 1. Create a new component called `Form`.
 2. Use the `useState` hook to manage the state of form input fields.
 3. Implement a function to handle form submission.
 4. Render input fields for each form field and a submit button.
 
-### 8. Create a ParentChild component set (10 minutes)
+### 7. Create a ParentChild component set (10 minutes)
 
 1. Create a new component called `Parent`.
 2. Create another component called `Child`.

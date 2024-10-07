@@ -1,13 +1,16 @@
 # Homework
 
+The homework for this week is to finish the class exercises and continue working on the meal sharing app, just like the previous week.
+
 ## Meal sharing app continued
 
 Let's create some routing in your `meal-sharing` repo!
 
 ### **Adding frontend routes**
 
-The routes for the application are defined in `/app/src/main.jsx`. In the previous homework you've added content to the `HomePage` component which is linked to the route `/`.
-To add a new route, start by creating a page component to attach to the route in `/app/src/components`, then define the route path and choose which page component to use.
+The routes for the application are defined below. In the previous homework you've added content to the `Home` component which is linked to the route `/`.
+To add a new route, start by creating components to attach to the route in `/frontend/components`, then define the route path in the directory and choose which components to use in the page.
+Alternatively, use Material UI to import pre-made components into your application.
 
 | Route         | Description                                                                                                                                                                                                                                                             |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

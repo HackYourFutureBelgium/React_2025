@@ -1,207 +1,168 @@
-# Lesson Plan - Thinking in React
+# Lesson Plan
+## Part 1
 
-- [Thinking the React way](https://reactjs.org/docs/thinking-in-react.html)
-  - What was the initial problem React solves?
-- Components
-  - Understanding the component model
-    - Break down a site into components
-  - Reusable blocks of JavaScript & HTML
-  - Each component instance can be given different data
-  - [Exercise](#working-with-component-trees)
-- JSX
-  - A way to write dynamic HTML code with JavaScript
-  - It is a more intuitive version of the function `createElement()`
-    - show https://babeljs.io/repl write `<div></div>` converted to `"use strict"; React.createElement("div", null);`
-  - A component should always return JSX
-  - These are the parts that will build the DOM structure
-  - `ReactDOM.render`
-  - Can display JavaScript values in the HTML, using the { } symbols
-  - Class component vs. functional component
-  - Always returns HTML (in the form of JSX)
-  - Render an array in `.map`
-- create-react-app
-  - Show students how to install create-react-app. [Getting Started](https://create-react-app.dev/docs/getting-started).
-  - Explain the general structure
-  - How to run `npm run start`
-  - Talk briefly about how the dist folder is generated
-- Component tree - hierarchy of components
-  - Transform a todolist sketch into components on white board.
-  - _Exercise:_ transform another ui into components in pairs.
-- Props
-  - Props is short for property (like a regular HTML attribute)
-  - It is (dynamic) data that can be given to child components
-  - Passed down using an identifier, a self-defined attribute name
-  - Can be given to multiple instances of components
-  - [Code inspiration](#userlist-components-jsx-and-props)
-  - [Exercise](#useritemexpanded)
+### Why React and Next.js? (10 min)
+* Limitations of Javascript
+* Purpose of React
+* Purpose of Next.js
 
-Both props and state are plain JavaScript objects/values.
+### Thinking in Components (10 min)
+* What are components?
+* Breaking down UI into reusable components
+* Hierarchy and composition of components
 
-Teacher suggestion:
+### Creating and running a Next.js app (10 min)
+* Creating a new app using `npx create-next-app@latest`
+* folder structure
+* Running the app using `npm run dev`
 
-- "Why React comes" - video - all students should watch this.
+### Basic Routing (10 minutes)
+* Explanation of routes
+* Creating subfolders in `app` directory with `page.jsx` file.
+* Create a component that defines a page
 
-## Flipped classroom videos
+## Part 2
 
-[Flipped classroom videos](./preparation.md#flipped-classroom-videos)
+### Writing your first static component (20 min)
+* Creating a Functional Component
+* Returning JSX
+   * Single Root Element Requirement
+   * Fragments
+* Using components inside components
 
-### Get started with React and parcel.js
+### Use {} to execute JS inside JSX (10 minutes)
+* Embedding Expressions in JSX
+* Conditional Rendering
 
-- https://github.com/senner008/react-min-boilerplate-parcel
+### Setting attributes (5 min)
+* HTML attributes
+* className
 
-## Coding inspiration
+### Importing / exporting .jsx (5 min)
+* defauls exports and named exports
 
-### UserList (Components, jsx and props)
+### Importing .css (5 minutes)
+* Global styles vs. component-specific styles
+* CSS modules in Next.js
 
-```js
-import React from "react";
-import ReactDOM from "react-dom";
+# Exercises
 
-function UserItem(props) {
-  return (
-    <li>
-      <h3>
-        {props.name}: {props.age}
-      </h3>
-    </li>
-  );
-}
+## Part 1
 
-function UserList(props) {
-  return (
-    <ul>
-      {props.users.map((user) => {
-        return <UserItem name={user.name} age={user.age} key={user.id} />;
-      })}
-    </ul>
-  );
-}
+### 1. Set up a new Next.js project (5 minutes)
+- Create a new app using `create-next-app` following [Setting up a new Next.js app](#setting-up-a-new-nextjs-project).
+- Start the web app
 
-const users = [
-  {
-    id: 0,
-    name: "Benjamin",
-    age: 32,
-  },
-  {
-    id: 1,
-    name: "Peter",
-    age: 43,
-  },
-];
+### 2. Writing static components (10 minutes)
 
-ReactDOM.render(<UserList users={users} />, document.getElementById("root"));
+- Create a functional component called `Greeting` that returns an `h1` element with the text "Hello, React!".
+- Create a functional component called `Card` that returns a `div` element with a nested `h2` element and a `p` element. The `h2` should display the text "Card Title", and the `p` should display the text "This is a card component".
+
+### 3. Nesting components (10 minutes)
+
+Create a functional component called `Cards` that renders two instances of the `Card` components from the previous exercise
+
+### 4. Executing JS inside JSX (10 minutes)
+
+Create a functional component called `Person` containing two constants `name` and `age`. The component should display the text: `{name} is an adult` if the age is 18 or higher or `{name} is a minor` if the age is less than 18.
+
+## Part 2
+
+### 5. Setting properties such as className and value (15 minutes)
+
+- Create a functional component called `Button` that renders a `button` element with a `className` prop set to `btn btn-primary`.
+- Create a functional component called `DangerButton` that renders a `button` element with a dangerous text and a `className` prop set to `btn btn-primary`.
+- Create a functional component called `TextInput` that renders a text input field with a placeholder value `Type something here`.
+- Create a functional component called `ProfileImage` that renders an image of a person.
+- Add all of the above components to your app
+
+### 6. Create sub pages (5 minutes)
+- Create a subpage `/why-us` with a list of 3 reasons your site is worth visiting
+- Create two subpages `/products/{product name}` for two fictional products your site contains. Add a simple header with the product name on both pages.
+
+### 7. Add basic styling (5 minutes)
+
+- Create a global CSS file that changes the color of all buttons to blue
+- Add component styles for the `DangerButton` which makes it large and red
+
+
+### (Bonus) Create a simple component structure
+- Design a basic layout with header, main content, and footer
+- Create separate components for each section
+
+
+
+
+
+
+
+
+
+# Help
+
+### Setting up a new Next.js project
+To create a new Next.js project, you can use the `create-next-app` command provided by [the React.js team](https://react.dev/learn/start-a-new-react-project):
+
+```bash
+npx create-next-app@latest
 ```
 
-### Counter example
+You will presented with a few options for the project you are generating. For this module we will use the following options:
+| Option    | Value  |
+| -------- | ------- |
+| Project name  | Name of your project |
+| Use TypeScript  | No  |
+| Use ESLint      | Yes |
+| Use Tailwind    | No  |
+| Use `src/` directory  | No |
+| Use App Router  | Yes |
+| Customize import alias    | No |
 
-```js
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+This will set up a new Next.js project with the necessary dependencies and a basic file structure.
 
-function Counter() {
-  const [counterState, setCounterState] = useState(0);
 
-  const increment = () => {
-    setCounterState((prev) => prev + 1);
-  };
+> [!NOTE]
+> Understanding all the options is out of the scope of this module, but if you are interested you can read more about it here:
+> 
+> - *[TypeScript](https://www.typescriptlang.org/)* is a superset of Javascript and introduces type checking which means it checks if the specified types match before running the code, not while running the code. It helps identifying errors early on.
+> - *[ESLint](https://eslint.org/)* is an a tool which analyzes your code to ensure it follows good coding conventions. This helps keep the code clean and maintainable.
+> - *[Tailwind CSS](https://tailwindcss.com/)* is a CSS framework which comes with a lot of utility classes to quickly add CSS styling to your components. It enables you to add styling without having to add most of the common CSS classes.
+> - Using a `src/` directory is a common pattern to separate your source code from your configuration of the app. It can help you get a better overview of the project as it grows, but this option ultimately comes down to personal preference and won't affect your app.
+> - *[App Router](https://www.freecodecamp.org/news/routing-in-nextjs/)* enables us to easily navigate between pages found in the `/app/pages/` folder. It is a build-in feature of Next.js and will solve most of your needs for page navigation.
 
-  return <button onClick={increment}>{counterState}</button>;
-}
-
-ReactDOM.render(<Counter />, document.getElementById("root"));
+### Running the development server
+First make sure to navigate to your project folder in the terminal
+```bash
+cd my-app # replace 'my-app' with the name of your app
 ```
 
-## Exercises
-
-### Working with component trees
-
-Write the component tree for these two sites. NO CODE!
-
-- [www.youtube.com](https://www.youtube.com/)
-- https://github.com/HackYourFuture-CPH
-
-Example:
-
-```
-<FancyHeader>
-    <Logo src="logoPath" />
-    <Navigation links={arrayOfLinks}>
-</FancyHeader>
+To start the Next.js development server, run the following command:
+```bash
+npm run dev
 ```
 
-### UserItemExpanded
+### Next.js project structure overview
+A typical Next.js project structure looks like this:
 
-Create a new component called `UserItemExpanded`. Render these user attributes:
-
-- Full name
-- Address
-- Age
-- Height
-- Spoken languages
-
-### Counter
-
-Expanding the Counter example, add two new buttons:
-
-1. Reset button. Clicking this button will reset the counter to 0 (zero).
-2. Increment double. Clicking this button will double the counter (multiply by 2).
-
-### UserItemList
-
-Create a component that renders a list of UserItemExpanded using the users array below
-
-```js
-const users = [
-  {
-    fullname: "testy mc testy face",
-    address: "test alley",
-    age: 35,
-    height: 185,
-    languages: ["danish", "arabic"],
-  },
-  {
-    fullname: "Ahmad Hansen",
-    address: "test alley 2",
-    age: 89,
-    height: 167,
-    languages: ["english", "polish"],
-  },
-  {
-    fullname: "Peter Petersen",
-    address: "alley 2",
-    age: 19,
-    height: 176,
-    languages: ["english", "danish"],
-  },
-];
+```
+my-app/
+├── node_modules/
+├── app/
+│   ├── page.jsx
+│   ├── layout.jsx
+│   ├── globals.css
+│   ├── favicon.ico
+│   └── ...
+├── components/
+├── public/
+├── .gitignore
+├── next.config.js
+├── jsconfig.json
+├── package.json
+└── package-lock.json
 ```
 
-## Extra (optional) exercise
-
-### Fibonacci Counter
-
-Count the fibonacci row instead. Log each new count as an expanding list of numbers:
-
-![Fibonacci Counter](assets/fibo_counter.png)
-
-You can start with this code and add the needed functionality:
-
-```js
-import React, { useState } from "react";
-
-export function Counter() {
-  const [counterState, setCounterState] = useState([0, 1]);
-
-  // ... some code here
-
-  return (
-    <div>
-      {counterState.map((counter) => (
-        <div>{counter}</div>
-      ))}
-      <button onClick={increment}>Increment</button>
-    </div>
-  );
-}
-```
+- `app/` directory contains the React components that represent different pages in your application.
+- `components/` directory contains the React components that represent all the custom components built by you.
+- `public/` directory is where you can store static assets like images, documents, etc.
+- `next.config.js` is a configuration file for customizing Next.js behavior.

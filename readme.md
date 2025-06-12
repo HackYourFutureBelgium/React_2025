@@ -3,7 +3,7 @@
 </h1>
 
 > [!NOTE]
-> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
+> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFutureBelgium/React_2025/pulls).
 
 <p align='center'>
 <img src='assets/react-logo.png' width='600px'>

@@ -2,7 +2,7 @@
 
 ### Start the homework
 
-Need to brush up on the homework setup process? Check [this](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) out before you get into some git confusion!
+Need to brush up on the homework setup process? Check [this](https://github.com/HackYourFutureBelgium/Git_2025/blob/main/homework-submission.md) out before you get into some git confusion!
 
 This week the homework will result in 2 PRs: 1 in your homework repository and 1 in the Meal Sharing repository.
 
@@ -22,4 +22,4 @@ The `MealsList` should render all the meals in a grid.
 ## Hand in homework
 
 Need to brush up on the homework hand-in process?<br/>
-Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) to remember how to hand in the homework correctly!
+Check [this resource](https://github.com/HackYourFutureBelgium/Git_2025/blob/main/homework-submission.md) to remember how to hand in the homework correctly!
